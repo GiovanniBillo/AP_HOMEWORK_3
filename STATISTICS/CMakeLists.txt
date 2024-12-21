@@ -36,7 +36,12 @@ include_directories(SYSTEM ${pybind11_INCLUDE_DIRS})
 
 pybind11_add_module(DataFrameWrapper src/bindings.cpp)
 target_link_libraries(DataFrameWrapper PRIVATE DataFrame::DataFrame)
+target_include_directories(DataFrameWrapper PRIVATE ${CMAKE_SOURCE_DIR}/include) # explicitly add the include directory for the target library as well
 
+# always place python library in the main directory ( to avoid having to set PYTHONPATH everytime)
+set_target_properties(DataFrameWrapper PROPERTIES
+    LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}
+)
 # Add the executable
 add_executable(main_stats src/main.cpp)
 
