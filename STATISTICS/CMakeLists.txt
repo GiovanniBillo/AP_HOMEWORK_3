@@ -17,7 +17,7 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 
 
 # Add the debugging flag
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g") # !!!TODO: modify with optimizations when releasing
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -fPIC") # !!!TODO: modify with optimizations when releasing
 
 include(FetchContent)
 
@@ -34,7 +34,8 @@ FetchContent_MakeAvailable(DataFrame)
 find_package(pybind11 REQUIRED)
 include_directories(SYSTEM ${pybind11_INCLUDE_DIRS})
 
-pybind11_add_module(DataFrameWrapper bindings.cpp)
+pybind11_add_module(DataFrameWrapper src/bindings.cpp)
+target_link_libraries(DataFrameWrapper PRIVATE DataFrame::DataFrame)
 
 # Add the executable
 add_executable(main_stats src/main.cpp)

@@ -6,5 +6,5 @@ CXX_DEFINES = -DDATA_DIR=\"/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanc
 
 CXX_INCLUDES = -I/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/STATISTICS/include -I/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/STATISTICS/build/_deps/dataframe-src/include
 
-CXX_FLAGS =  -g -std=gnu++23
+CXX_FLAGS =  -g -fPIC -std=gnu++23
 

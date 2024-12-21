@@ -5,7 +5,7 @@
 
 namespace py = pybind11;
 
-PYBIND11_MODULE(dataframe_wrapper, m) {
+PYBIND11_MODULE(DataFrameWrapper, m) {
     m.doc() = "Python bindings for DataFrameWrapper";
 
     py::class_<Toolbox::dfw::DataFrameWrapper<double>>(m, "DataFrameWrapper")

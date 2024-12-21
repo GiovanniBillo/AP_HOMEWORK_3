@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/DataFrameWrapper.dir/bindings.cpp.o"
-  "CMakeFiles/DataFrameWrapper.dir/bindings.cpp.o.d"
+  "CMakeFiles/DataFrameWrapper.dir/src/bindings.cpp.o"
+  "CMakeFiles/DataFrameWrapper.dir/src/bindings.cpp.o.d"
   "DataFrameWrapper.cpython-310-x86_64-linux-gnu.so"
   "DataFrameWrapper.pdb"
 )

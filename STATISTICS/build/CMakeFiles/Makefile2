@@ -97,7 +97,7 @@ _deps/dataframe-build/clean: _deps/dataframe-build/CMakeFiles/DataFrame.dir/clea
 # Target rules for target CMakeFiles/DataFrameWrapper.dir
 
 # All Build rule for target.
-CMakeFiles/DataFrameWrapper.dir/all:
+CMakeFiles/DataFrameWrapper.dir/all: _deps/dataframe-build/CMakeFiles/DataFrame.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DataFrameWrapper.dir/build.make CMakeFiles/DataFrameWrapper.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DataFrameWrapper.dir/build.make CMakeFiles/DataFrameWrapper.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/STATISTICS/build/CMakeFiles --progress-num=3,4 "Built target DataFrameWrapper"
@@ -105,7 +105,7 @@ CMakeFiles/DataFrameWrapper.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/DataFrameWrapper.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/STATISTICS/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/STATISTICS/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/DataFrameWrapper.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/STATISTICS/build/CMakeFiles 0
 .PHONY : CMakeFiles/DataFrameWrapper.dir/rule
