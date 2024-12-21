@@ -20,21 +20,47 @@ PYBIND11_MODULE(dataframe_wrapper, m) {
              py::arg("columnName"),
              "Get the index of a column by name.")
 
-        /* .def("columns_by_name", &Toolbox::dfw::DataFrameWrapper<double>::columns<double>, */
+        /* .def("columns_by_name", &Toolbox::dfw::DataFrameWrapper<double>::template columns<double>, */
         /*      py::arg("columnName"), */
         /*      "Retrieve a column by name."); */
+
+        .def("columns_by_name", [](Toolbox::dfw::DataFrameWrapper<double> &self, const char *columnName) {
+                return self.columns<double>(columnName); // Explicit template argument
+            },
+            /* py::arg("columnName"), */
+            "Retrieve a column by name.")
+
 
         /* .def("columns_by_index", &Toolbox::dfw::DataFrameWrapper<double>::template columns<double>, */
         /*      py::arg("col_index"), */
         /*      "Retrieve a column by index.") */
+        
+        .def("columns_by_index",[](Toolbox::dfw::DataFrameWrapper<double> &self, size_t col_index) {
+                 return self.columns<double>(col_index); // Explicit template argument
+            },
+            /* py::arg("col_index"), */
+           "Retrieve a column by index.")
 
         /* .def("columns_by_entry", &Toolbox::dfw::DataFrameWrapper<double>::template columns<double>, */
         /*      py::arg("col_index"), py::arg("row_index"), */
         /*      "Retrieve a specific entry in a column.") */
+        
+          
+        .def("columns_by_entry",[](Toolbox::dfw::DataFrameWrapper<double> &self, size_t col_index, size_t row_index) {
+                return self.columns<double>(col_index, row_index); // Explicit template argument
+            },
+             /* py::arg("col_index"), py::arg("row_index"), */
+             "Retrieve a specific entry in a column.")
 
         /* .def("columns_by_slice", &Toolbox::dfw::DataFrameWrapper<double>::template columns<double>, */
         /*      py::arg("col_index"), py::arg("start"), py::arg("stop"), */
         /*      "Retrieve a slice of a column.") */
+
+        .def("columns_by_slice", [](Toolbox::dfw::DataFrameWrapper<double> &self, size_t col_index, size_t start, size_t stop) {
+                return self.columns<double>(col_index, start, stop); // Explicit template argument
+            },
+             /* py::arg("col_index"), py::arg("start"), py::arg("stop"), */
+             "Retrieve a slice of a column.")
 
         .def("standard_deviation", &Toolbox::dfw::DataFrameWrapper<double>::template StandardDeviation<double>,
              py::arg("columnName"),
