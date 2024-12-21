@@ -30,11 +30,39 @@ FetchContent_Declare(
 # Ensure the ALGLIB library is downloaded and built
 FetchContent_MakeAvailable(alglib)
 
+# Fetch the pybind11 library
+FetchContent_Declare(
+    pybind11
+    GIT_REPOSITORY https://github.com/pybind/pybind11.git
+    GIT_TAG v2.11.1  # Specify a stable version; change as needed
+)
+
+# Ensure pybind11 is downloaded and available
+FetchContent_MakeAvailable(pybind11)
+
+# find_package(pybind11 REQUIRED)
+# include_directories(SYSTEM ${pybind11_INCLUDE_DIRS})
+# pybind11_add_module(example example.cpp)
+
+add_library(Interpolation STATIC 
+    InterpolateWrapper.hpp
+    helpers.hpp
+    helpers.cpp
+)
+
+add_library(InterpolationPython 
+    InterpolateWrapper.hpp
+    bindings.cpp
+    helpers.hpp
+    helpers.cpp
+)
+
 # Add the executable
 add_executable(main_interpolation main.cpp)
 
 # If ALGLIB is header-only or doesn't provide a library target:
-target_include_directories(main_interpolation PRIVATE ${alglib_SOURCE_DIR}/src)
+# target_include_directories(main_interpolation PRIVATE ${alglib_SOURCE_DIR}/src)
+# target_include_directories(InterpolationPython PRIVATE ${alglib_SOURCE_DIR}/src)
 
 # If ALGLIB provides a CMake target (for example, alglib::alglib), link it
 # Uncomment the line below if a proper CMake target is available
@@ -47,6 +75,7 @@ file(GLOB ALGLIB_SRC
 
 # Link the source files to your project if ALGLIB doesn't have a CMake target
 target_sources(main_interpolation PRIVATE ${ALGLIB_SRC})
+target_sources(InterpolationPython PRIVATE ${ALGLIB_SRC})
 
 # Message to confirm the source directory of ALGLIB
 message(STATUS "ALGLIB source dir: ${alglib_SOURCE_DIR}")

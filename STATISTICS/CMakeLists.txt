@@ -31,6 +31,11 @@ FetchContent_Declare(
 # Ensure the DataFrame library is downloaded and built
 FetchContent_MakeAvailable(DataFrame)
 
+find_package(pybind11 REQUIRED)
+include_directories(SYSTEM ${pybind11_INCLUDE_DIRS})
+
+pybind11_add_module(DataFrameWrapper bindings.cpp)
+
 # Add the executable
 add_executable(main_stats src/main.cpp)
 
