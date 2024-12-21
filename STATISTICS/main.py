@@ -1,9 +1,14 @@
-from DataFrameWrapper import DataFrameWrapper 
+from DataFrameWrapper import DataFrameWrapperInt 
+from random import sample 
+
+def col_sample(dfw, colname, n_sample, filter):
+    colsample = sample(dfw.columns_by_name(colname), n_sample)
+    return colsample
 
 def main():
     # Create an instance of DataFrameWrapper
     print("Initializing DataFrameWrapper...")
-    dfw = DataFrameWrapper("r.csv", "o.csv")
+    dfw = DataFrameWrapperInt("r.csv", "o.csv")
 
     # Example usage of DataFrameWrapper methods
     print("Instance created successfully.")
@@ -20,41 +25,46 @@ def main():
         column_name1 = "Discount"  # index = 4
         column_name2 = "Profit"    # index = 6
 
-        print("Retrieving each information by itself")
+        # print("Retrieving each information by itself")
 
-        # Retrieve the Discount column by name
+        # # Retrieve the Discount column by name
         discount_column = dfw.columns_by_name(column_name1)
+        print(type(discount_column))
+        def filter(value):
+            return value > 0
+        discount_sample = col_sample(dfw, column_name1, 10, filter)
+        print(discount_sample)
 
-        # Get column index for "Discount"
-        discount_index = dfw.get_col_index(column_name1)
+        # # Get column index for "Discount"
+        # discount_index = dfw.get_col_index(column_name1)
 
-        # Retrieve the Discount column by index
-        discount_column_byindex = dfw.columns_by_index(discount_index)
+        # # Retrieve the Discount column by index
+        # discount_column_byindex = dfw.columns_by_index(discount_index)
 
-        # Retrieve a single entry from the Discount column (4th column, 2nd row)
-        discount_column_entry_byindex = dfw.columns_by_entry(4, 1)
+        # # Retrieve a single entry from the Discount column (4th column, 2nd row)
+        # discount_column_entry_byindex = dfw.columns_by_entry(4, 1)
 
-        # Retrieve a slice of the Discount column (4th column, rows 1 to 4)
-        discount_column_slice = dfw.columns_by_slice(4, 1, 4)
+        # # Retrieve a slice of the Discount column (4th column, rows 1 to 4)
+        # discount_column_slice = dfw.columns_by_slice(4, 1, 4)
 
-        print(f"name and then index: {discount_column[1]}, {discount_column[2]}, {discount_column[3]}")
-        print(f"by column index: {discount_column_byindex[1]}, {discount_column_byindex[2]}, {discount_column_byindex[3]}")
-        print(f"indexing into a slice: {discount_column_slice[0]}, {discount_column_slice[1]}, {discount_column_slice[2]}")
+        # print(f"name and then index: {discount_column[1]}, {discount_column[2]}, {discount_column[3]}")
+        # print(f"by column index: {discount_column_byindex[1]}, {discount_column_byindex[2]}, {discount_column_byindex[3]}")
+        # print(f"indexing into a slice: {discount_column_slice[0]}, {discount_column_slice[1]}, {discount_column_slice[2]}")
 
-        # Statistical calculations
-        sd = dfw.standard_deviation(column_name1)
-        mean = dfw.mean(column_name1)
-        variance = dfw.variance(column_name1)
-        median = dfw.median(column_name1)
-        correlation = dfw.correlation(column_name1, column_name2)
-        frequency_counts = dfw.frequency_count(column_name1)
+        # # Statistical calculations
+        # sd = dfw.standard_deviation(column_name1)
+        # mean = dfw.mean(column_name1)
+        # variance = dfw.variance(column_name1)
+        # median = dfw.median(column_name1)
+        # correlation = dfw.correlation(column_name1, column_name2)
+        # frequency_counts = dfw.frequency_count(column_name1)
 
-        print(f"Standard Deviation: {sd}")
-        print(f"Mean: {mean}")
-        print(f"Variance: {variance}")
-        print(f"Median: {median}")
-        print(f"Correlation between {column_name1} and {column_name2}: {correlation}")
-        print(f"Frequency counts for {column_name1}: {frequency_counts}")
+        # print(f"Standard Deviation: {sd}")
+        # print(f"Mean: {mean}")
+        # print(f"Variance: {variance}")
+        # print(f"Median: {median}")
+        # print(f"Correlation between {column_name1} and {column_name2}: {correlation}")
+        # print(f"Frequency counts for {column_name1}: {frequency_counts}")
 
         # Summary function
         print("Summary function:")
@@ -79,8 +89,6 @@ def main():
         conditions = [
                 below_mean,
                 above_mean
-            # lambda value: value < mean_profit,  # Below Mean
-            # lambda value: value >= mean_profit  # Above Mean
         ]
 
         classifications = dfw.classify(column_name2, categories, conditions)
