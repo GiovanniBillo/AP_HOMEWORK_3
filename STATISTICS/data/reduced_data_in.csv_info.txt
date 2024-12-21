@@ -1,0 +1,10 @@
+INDEX:9:<string>
+COUNT
+MISSING
+MEAN
+STD
+MIN
+MAX
+25%
+50%
+75%

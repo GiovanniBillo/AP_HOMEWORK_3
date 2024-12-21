@@ -91,7 +91,8 @@ namespace Toolbox{
                         std::rename("merged.csv", outputFilename.c_str());
 
                     }else
-                    {               
+                    {
+                        std::cout << "The file is already formatted!" << std::endl;
                         inputFile.clear();               // Clear any error flags
                         inputFile.seekg(0, std::ios::beg); // Move to the beginning of the file
                         outputFile << inputFile.rdbuf(); // Copy file contents directly

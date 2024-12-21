@@ -1,14 +1,12 @@
 from DataFrameWrapper import DataFrameWrapperInt 
-from random import sample 
+from helpers import reduce_dfw, col_sample, compare_efficiency
 
-def col_sample(dfw, colname, n_sample, filter):
-    colsample = sample(dfw.columns_by_name(colname), n_sample)
-    return colsample
+
 
 def main():
     # Create an instance of DataFrameWrapper
     print("Initializing DataFrameWrapper...")
-    dfw = DataFrameWrapperInt("r.csv", "o.csv")
+    dfw = DataFrameWrapperInt("r.csv", "oib.csv")
 
     # Example usage of DataFrameWrapper methods
     print("Instance created successfully.")
@@ -32,8 +30,16 @@ def main():
         print(type(discount_column))
         def filter(value):
             return value > 0
-        discount_sample = col_sample(dfw, column_name1, 10, filter)
+        discount_sample = col_sample(dfw, column_name1, 50, filter)
+
         print(discount_sample)
+        print("It is also possible to subset a DataFrameWrapper instance and create a new one on the fly")
+        smaller_dfw = reduce_dfw(dfw, "Discount", "Profit")
+        smaller_dfw.get_info() 
+
+        
+        print("Let's now compare the performance of this binded class and its hybrid approach with the exclusively C++ one")
+        # compare_efficiency()
 
         # # Get column index for "Discount"
         # discount_index = dfw.get_col_index(column_name1)
@@ -67,35 +73,35 @@ def main():
         # print(f"Frequency counts for {column_name1}: {frequency_counts}")
 
         # Summary function
-        print("Summary function:")
-        dfw.get_info()
+        # print("Summary function:")
+        # dfw.get_info()
 
-        print("Classifying column data based on specific criteria:")
-        print("Usage example: classify profit data as below or above average")
+        # print("Classifying column data based on specific criteria:")
+        # print("Usage example: classify profit data as below or above average")
 
-        # Classification based on conditions
-        mean_profit = dfw.mean(column_name2)
-        profits = dfw.columns_by_name(column_name2)
+        # # Classification based on conditions
+        # mean_profit = dfw.mean(column_name2)
+        # profits = dfw.columns_by_name(column_name2)
 
-        categories = ["Below Mean", "Above Mean"]
+        # categories = ["Below Mean", "Above Mean"]
 
-        # Define classification conditions as lambda functions //TODO: modify as c++ doesn;t like python lambda functions
-        def below_mean(value):
-            return value < mean_profit
-        def above_mean(value):
-            return value >= mean_profit
+        # # Define classification conditions as lambda functions //TODO: modify as c++ doesn;t like python lambda functions
+        # def below_mean(value):
+        #     return value < mean_profit
+        # def above_mean(value):
+        #     return value >= mean_profit
 
 
-        conditions = [
-                below_mean,
-                above_mean
-        ]
+        # conditions = [
+        #         below_mean,
+        #         above_mean
+        # ]
 
-        classifications = dfw.classify(column_name2, categories, conditions)
+        # classifications = dfw.classify(column_name2, categories, conditions)
 
-        print(f"Average profit: {mean_profit}")
-        for i in range(5):  # Display the first 5 entries
-            print(f"Profit: {profits[i]} -> {classifications[i]}")
+        # print(f"Average profit: {mean_profit}")
+        # for i in range(5):  # Display the first 5 entries
+        #     print(f"Profit: {profits[i]} -> {classifications[i]}")
 
     except Exception as e:
         print(f"An error occurred while interacting with DataFrameWrapper: {e}")

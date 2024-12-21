@@ -9,11 +9,26 @@ namespace py = pybind11;
 PYBIND11_MODULE(DataFrameWrapper, m) {
     m.doc() = "Python bindings for DataFrameWrapper";
 
+    m.def("check_condition", &Toolbox::dfw::check_condition, py::arg("col"), py::arg("filter"));
 //INT
     py::class_<Toolbox::dfw::DataFrameWrapper<int>>(m, "DataFrameWrapperInt")
         .def(py::init<>())
+
         .def(py::init<const char *, const char *>(),
              py::arg("inputFilename"), py::arg("outputFilename"))
+
+        .def_property_readonly("input_filename", 
+               [](const Toolbox::dfw::DataFrameWrapper<int> &self) {
+                return self.getInputFilename();
+            })
+        .def_property_readonly("output_filename",
+                [](const Toolbox::dfw::DataFrameWrapper<int> &self) {
+                return self.getOutputFilename();
+            })
+        .def_property_readonly("data_dir", 
+                [](const Toolbox::dfw::DataFrameWrapper<int> &self) {
+                return self.getDataDirectory();
+                })
 
         .def("load_and_read_file", &Toolbox::dfw::DataFrameWrapper<int>::loadAndReadFile,
              "Load and read the input file.")
@@ -88,6 +103,19 @@ PYBIND11_MODULE(DataFrameWrapper, m) {
         .def(py::init<const char *, const char *>(),
              py::arg("inputFilename"), py::arg("outputFilename"))
 
+        .def_property_readonly("input_filename", 
+               [](const Toolbox::dfw::DataFrameWrapper<int> &self) {
+                return self.getInputFilename();
+            })
+        .def_property_readonly("output_filename",
+                [](const Toolbox::dfw::DataFrameWrapper<int> &self) {
+                return self.getOutputFilename();
+            })
+        .def_property_readonly("data_dir", 
+                [](const Toolbox::dfw::DataFrameWrapper<int> &self) {
+                return self.getDataDirectory();
+                })
+
         .def("load_and_read_file", &Toolbox::dfw::DataFrameWrapper<double>::loadAndReadFile,
              "Load and read the input file.")
 
@@ -146,7 +174,7 @@ PYBIND11_MODULE(DataFrameWrapper, m) {
              py::arg("columnName1"), py::arg("categories"), py::arg("conditions"),
              "Classify column data based on conditions.")
 
-#ifdef doubleERPOLATION_MODULE
+#ifdef INTERPOLATION_MODULE
         .def("interpolate", &Toolbox::dfw::DataFrameWrapper<double>::template Interpolate<double>,
              py::arg("columnName1"), py::arg("columnName2"), py::arg("categories"), py::arg("conditions"),
              "doubleerpolate column data based on conditions.")
@@ -162,6 +190,19 @@ PYBIND11_MODULE(DataFrameWrapper, m) {
         .def(py::init<>())
         .def(py::init<const char *, const char *>(),
              py::arg("inputFilename"), py::arg("outputFilename"))
+
+        .def_property_readonly("input_filename", 
+               [](const Toolbox::dfw::DataFrameWrapper<int> &self) {
+                return self.getInputFilename();
+            })
+        .def_property_readonly("output_filename",
+                [](const Toolbox::dfw::DataFrameWrapper<int> &self) {
+                return self.getOutputFilename();
+            })
+        .def_property_readonly("data_dir", 
+                [](const Toolbox::dfw::DataFrameWrapper<int> &self) {
+                return self.getDataDirectory();
+                })
 
         .def("load_and_read_file", &Toolbox::dfw::DataFrameWrapper<std::string>::loadAndReadFile,
              "Load and read the input file.")

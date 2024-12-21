@@ -46,6 +46,20 @@ namespace Toolbox{
                             std::cout << "provided input filename:" << inputFilename << std::endl;
                             std::cout << "provided outputfilename:" << outputFilename << std::endl;
                         }
+                    // Getter for data_directory
+                    std::filesystem::path getDataDirectory() const {
+                        return data_directory;
+                    }
+
+                    // Getter for inputFilename
+                    std::string getInputFilename() const {
+                        return inputFilename;
+                    }
+
+                    // Getter for outputFilename
+                    std::string getOutputFilename() const {
+                        return outputFilename;
+                    }
 
                     void loadAndReadFile() {
 
@@ -224,8 +238,17 @@ namespace Toolbox{
 
 
             };
+        std::vector<double> check_condition(std::vector<double>& col, std::function<bool(double)> filter){
+            std::vector<double> meet_condition;
 
+            for (const auto& item : col) {
+                if(filter(item))
+                    meet_condition.push_back(item);
+            }
 
+            std::cout << meet_condition.size() << "items in the column match the desired criteria" << std::endl;
+            return meet_condition;
+            }
     }
 }
 
