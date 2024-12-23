@@ -1,4 +1,4 @@
-import InterpolationPython as ip
+import InterpolateWrapper as ip
 from math import sin
 def f(x):
     return sin(x)
