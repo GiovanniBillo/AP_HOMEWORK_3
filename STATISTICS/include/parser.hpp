@@ -10,6 +10,8 @@ namespace Toolbox{
         class CSVParser {
             private:
                 std::vector<std::pair<std::string, std::string>> columnNames;
+                size_t rowCount;
+                size_t colIndex;
             public:
                 void parse(const std::string& inputFilename, const std::string& outputFilename) {
                     std::ifstream inputFile(inputFilename);
@@ -44,12 +46,12 @@ namespace Toolbox{
                         columnNames[0].first = "INDEX";
 
                         // Parse data rows
-                        size_t rowCount = 0;
+                        rowCount = 0;
                         std::string rowLine;
                         while (std::getline(inputFile, rowLine)) {
                             std::stringstream rowStream(rowLine);
                             std::string cell;
-                            size_t colIndex = 0;
+                            colIndex = 0;
                             while (std::getline(rowStream, cell, ',')) {
                                 if (colIndex >= columnNames.size()) break;
                                 updateColumnType(columnNames[colIndex].first, cleanString(cell), columnNames);
@@ -103,6 +105,14 @@ namespace Toolbox{
                 std::vector<std::pair<std::string, std::string>> getColumnTypes() {
                     return columnNames;
                 }
+
+                size_t getRowCount() {
+                    return rowCount;
+                }
+                size_t getColCount() {
+                    return colIndex;
+                }
+
 
         };
 

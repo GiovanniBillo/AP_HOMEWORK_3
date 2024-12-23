@@ -25,6 +25,8 @@ namespace Toolbox{
                     std::filesystem::path data_directory;
                     std::string inputFilename;
                     std::string outputFilename;
+                    size_t rowCount;
+                    size_t colCount;
 
                     hmdf::StdDataFrame<T> df;
 
@@ -46,6 +48,20 @@ namespace Toolbox{
                             std::cout << "provided input filename:" << inputFilename << std::endl;
                             std::cout << "provided outputfilename:" << outputFilename << std::endl;
                         }
+                    // Getter for columnInfo 
+                    std::vector<std::pair<std::string, std::string>> getColumnInfo() const {
+                        return columnInfo;
+                    }
+
+                    // Getter for colCount 
+                    size_t getColCount() const {
+                        return colCount;
+                    }
+                    // Getter for rowCount 
+                    size_t getRowCount() const {
+                        return rowCount;
+                    }
+
                     // Getter for data_directory
                     std::filesystem::path getDataDirectory() const {
                         return data_directory;
@@ -72,6 +88,8 @@ namespace Toolbox{
                         parser.parse(if_path.string(), of_path.string()); 
 
                         columnInfo = parser.getColumnTypes();
+                        rowCount = parser.getRowCount();
+                        colCount = parser.getColCount();
 
                         // DataFrame requires file input for read to be in C-style string
                         const char* c_path = of_path.c_str();

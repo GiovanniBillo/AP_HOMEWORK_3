@@ -16,7 +16,20 @@ PYBIND11_MODULE(DataFrameWrapper, m) {
 
         .def(py::init<const char *, const char *>(),
              py::arg("inputFilename"), py::arg("outputFilename"))
-
+        
+        // GETTER METHODS
+        .def_property_readonly("column_info", 
+               [](const Toolbox::dfw::DataFrameWrapper<int> &self) {
+                return self.getColumnInfo();
+            })
+        .def_property_readonly("n_rows", 
+               [](const Toolbox::dfw::DataFrameWrapper<int> &self) {
+                return self.getRowCount();
+            })
+        .def_property_readonly("n_cols", 
+               [](const Toolbox::dfw::DataFrameWrapper<int> &self) {
+                return self.getColCount();
+            })
         .def_property_readonly("input_filename", 
                [](const Toolbox::dfw::DataFrameWrapper<int> &self) {
                 return self.getInputFilename();
@@ -27,7 +40,7 @@ PYBIND11_MODULE(DataFrameWrapper, m) {
             })
         .def_property_readonly("data_dir", 
                 [](const Toolbox::dfw::DataFrameWrapper<int> &self) {
-                return self.getDataDirectory();
+                return self.getDataDirectory().string();
                 })
 
         .def("load_and_read_file", &Toolbox::dfw::DataFrameWrapper<int>::loadAndReadFile,
@@ -113,7 +126,7 @@ PYBIND11_MODULE(DataFrameWrapper, m) {
             })
         .def_property_readonly("data_dir", 
                 [](const Toolbox::dfw::DataFrameWrapper<int> &self) {
-                return self.getDataDirectory();
+                return self.getDataDirectory().string();
                 })
 
         .def("load_and_read_file", &Toolbox::dfw::DataFrameWrapper<double>::loadAndReadFile,
@@ -201,7 +214,7 @@ PYBIND11_MODULE(DataFrameWrapper, m) {
             })
         .def_property_readonly("data_dir", 
                 [](const Toolbox::dfw::DataFrameWrapper<int> &self) {
-                return self.getDataDirectory();
+                return self.getDataDirectory().string();
                 })
 
         .def("load_and_read_file", &Toolbox::dfw::DataFrameWrapper<std::string>::loadAndReadFile,

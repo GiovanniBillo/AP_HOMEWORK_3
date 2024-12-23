@@ -1,5 +1,5 @@
 from DataFrameWrapper import DataFrameWrapperInt 
-from helpers import reduce_dfw, col_sample, compare_efficiency
+from helpers import reduce_dfw, col_sample, compare_efficiency, Enhance
 
 
 
@@ -36,9 +36,12 @@ def main():
         print("It is also possible to subset a DataFrameWrapper instance and create a new one on the fly")
         smaller_dfw = reduce_dfw(dfw, "Discount", "Profit")
         smaller_dfw.get_info() 
-
+        print(smaller_dfw.input_filename, smaller_dfw.output_filename, smaller_dfw.data_dir)
         
-        print("Let's now compare the performance of this binded class and its hybrid approach with the exclusively C++ one")
+        print(Enhance(smaller_dfw))
+        Enhance(smaller_dfw).plot("Discount", "Profit")
+        Enhance(smaller_dfw).__repr__()
+        # print("Let's now compare the performance of this binded class and its hybrid approach with the exclusively C++ one")
         # compare_efficiency()
 
         # # Get column index for "Discount"
