@@ -1,0 +1,1 @@
+/usr/bin/c++  -O0 -g -Wall -Wpedantic -Wextra -fPIC -g CMakeFiles/main_interpolation.dir/src/main.cpp.o -o main_interpolation  external/alglib-cpp/libalglib.a 
