@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/external/alglib-cpp -I/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/INTERPOLATION/include -I/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/INTERPOLATION/external/alglib/src -I/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/external/alglib-cpp/src -isystem /home/giovanni/.local/include -isystem /usr/include/python3.10
 
-CXX_FLAGS =  -O0 -g -Wall -Wpedantic -Wextra -g -std=gnu++23
+CXX_FLAGS =  -O0 -g -Wall -Wpedantic -Wextra -fPIC -g -fPIE -std=gnu++23
 

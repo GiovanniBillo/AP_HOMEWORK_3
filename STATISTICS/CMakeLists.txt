@@ -13,7 +13,7 @@ endif()
 
 add_definitions(-DDATA_DIR=\"${DATA_DIR}\")
 
-include_directories(${CMAKE_SOURCE_DIR}/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 
 # Add the debugging flag
@@ -36,12 +36,12 @@ include_directories(SYSTEM ${pybind11_INCLUDE_DIRS})
 
 pybind11_add_module(DataFrameWrapper src/bindings.cpp)
 target_link_libraries(DataFrameWrapper PRIVATE DataFrame::DataFrame)
-target_include_directories(DataFrameWrapper PRIVATE ${CMAKE_SOURCE_DIR}/include) # explicitly add the include directory for the target library as well
+target_include_directories(DataFrameWrapper PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include) # explicitly add the include directory for the target library as well
 
-# always place python library in the main directory ( to avoid having to set PYTHONPATH everytime)
-set_target_properties(DataFrameWrapper PROPERTIES
-    LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}
-)
+# # always place python library in the main directory ( to avoid having to set PYTHONPATH everytime)
+# set_target_properties(DataFrameWrapper PROPERTIES
+#     LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}
+# )
 # Add the executable
 add_executable(main_stats src/main.cpp)
 
@@ -55,9 +55,10 @@ target_link_libraries(main_stats PRIVATE DataFrame::DataFrame)
 if(INTERPOLATION_MODULE)
     message(STATUS "Include the InterpolationWrapper and Interpolate custom visitor")
     add_compile_definitions(INTERPOLATION_MODULE)
-    target_compile_definitions(main PRIVATE INTERPOLATION_MODULE)
+    target_compile_definitions(main_stats PRIVATE INTERPOLATION_MODULE)
 
-
+    # Add ALGLIB include directory
+    include_directories(${ALGLIB_INCLUDE_DIR})
     
     # # Add custom library
     # add_library(CustomLib STATIC custom_library.cpp)
@@ -75,6 +76,7 @@ if(INTERPOLATION_MODULE)
     # If ALGLIB is header-only or doesn't provide a library target:
     target_include_directories(main_stats PRIVATE ${alglib_SOURCE_DIR}/src)
 
+
     # If ALGLIB provides a CMake target (for example, alglib::alglib), link it
     # Uncomment the line below if a proper CMake target is available
     # target_link_libraries(main PRIVATE alglib::alglib)
@@ -86,7 +88,7 @@ if(INTERPOLATION_MODULE)
 
 
     # Link the source files to your project if ALGLIB doesn't have a CMake target
-    target_sources(main PRIVATE ${ALGLIB_SRC})
+    target_sources(main_stats PRIVATE ${ALGLIB_SRC})
 
 else()
     message(STATUS "Interpolation module is not included")

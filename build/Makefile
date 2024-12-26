@@ -201,30 +201,17 @@ DataFrame/fast:
 .PHONY : DataFrame/fast
 
 #=============================================================================
-# Target rules for targets named Interpolation
+# Target rules for targets named InterpolateWrapper
 
 # Build rule for target.
-Interpolation: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Interpolation
-.PHONY : Interpolation
+InterpolateWrapper: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 InterpolateWrapper
+.PHONY : InterpolateWrapper
 
 # fast build rule for target.
-Interpolation/fast:
-	$(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/Interpolation.dir/build.make INTERPOLATION/CMakeFiles/Interpolation.dir/build
-.PHONY : Interpolation/fast
-
-#=============================================================================
-# Target rules for targets named InterpolationPython
-
-# Build rule for target.
-InterpolationPython: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 InterpolationPython
-.PHONY : InterpolationPython
-
-# fast build rule for target.
-InterpolationPython/fast:
-	$(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/build
-.PHONY : InterpolationPython/fast
+InterpolateWrapper/fast:
+	$(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolateWrapper.dir/build.make INTERPOLATION/CMakeFiles/InterpolateWrapper.dir/build
+.PHONY : InterpolateWrapper/fast
 
 #=============================================================================
 # Target rules for targets named main_interpolation
@@ -238,6 +225,19 @@ main_interpolation: cmake_check_build_system
 main_interpolation/fast:
 	$(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/build
 .PHONY : main_interpolation/fast
+
+#=============================================================================
+# Target rules for targets named alglib
+
+# Build rule for target.
+alglib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 alglib
+.PHONY : alglib
+
+# fast build rule for target.
+alglib/fast:
+	$(MAKE) $(MAKESILENT) -f external/alglib-cpp/CMakeFiles/alglib.dir/build.make external/alglib-cpp/CMakeFiles/alglib.dir/build
+.PHONY : alglib/fast
 
 # Help Target
 help:
@@ -253,8 +253,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... DataFrame"
 	@echo "... DataFrameWrapper"
-	@echo "... Interpolation"
-	@echo "... InterpolationPython"
+	@echo "... InterpolateWrapper"
+	@echo "... alglib"
 	@echo "... main_interpolation"
 	@echo "... main_stats"
 .PHONY : help

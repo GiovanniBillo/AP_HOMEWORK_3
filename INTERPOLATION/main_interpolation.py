@@ -42,14 +42,15 @@ def main():
    lagrange_interpolator= ip.LagrangeInterpolator()
    spline_interpolator = ip.SplineInterpolator()
 
-   linear_interpolator.build(vec_x, vec_y, len(vec_y), lb, ub)
-   Enhance(linear_interpolator).plot_errors(max_points, generate_vector, plot_function, f, lb, ub, "Linear") 
+   # linear_interpolator.build(vec_x, vec_y, len(vec_y), lb, ub)
+   # Enhance(linear_interpolator).plot_errors(max_points, generate_vector, plot_function, f, lb, ub, "Linear") 
 
-   # lagrange_interpolator.build(vec_x, vec_y, len(vec_y), lb, ub)
+   lagrange_interpolator.build(vec_x, vec_y, len(vec_y), lb, ub)
+   error = lagrange_interpolator.error(f, lb, ub)
    # Enhance(lagrange_interpolator).plot_errors(max_points, generate_vector, plot_function, f, lb, ub, "Lagrange") 
     
     
-   # spline_interpolator.build(vec_x, vec_y, len(vec_y), lb, ub)
+   spline_interpolator.build(vec_x, vec_y, len(vec_y), lb, ub)
    # Enhance(spline_interpolator).plot_errors(max_points, generate_vector, plot_function, f, lb, ub, "Spline") 
     
 

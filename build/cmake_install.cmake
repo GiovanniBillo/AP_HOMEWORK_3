@@ -46,6 +46,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/STATISTICS/cmake_install.cmake")
   include("/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION/cmake_install.cmake")
+  include("/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/external/alglib-cpp/cmake_install.cmake")
 
 endif()
 

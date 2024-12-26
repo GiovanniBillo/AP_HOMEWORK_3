@@ -291,28 +291,14 @@ FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
 FETCHCONTENT_QUIET:BOOL=ON
 
 //When not empty, overrides where to find pre-populated content
-// for alglib
-FETCHCONTENT_SOURCE_DIR_ALGLIB:PATH=
-
-//When not empty, overrides where to find pre-populated content
 // for DataFrame
 FETCHCONTENT_SOURCE_DIR_DATAFRAME:PATH=
-
-//When not empty, overrides where to find pre-populated content
-// for pybind11
-FETCHCONTENT_SOURCE_DIR_PYBIND11:PATH=
 
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
 
-//Enables UPDATE_DISCONNECTED behavior just for population of alglib
-FETCHCONTENT_UPDATES_DISCONNECTED_ALGLIB:BOOL=OFF
-
 //Enables UPDATE_DISCONNECTED behavior just for population of DataFrame
 FETCHCONTENT_UPDATES_DISCONNECTED_DATAFRAME:BOOL=OFF
-
-//Enables UPDATE_DISCONNECTED behavior just for population of pybind11
-FETCHCONTENT_UPDATES_DISCONNECTED_PYBIND11:BOOL=OFF
 
 //Git command line client
 GIT_EXECUTABLE:FILEPATH=/usr/bin/git
@@ -329,31 +315,12 @@ HMDF_TESTING:BOOL=OFF
 //Include the InterpolationWrapper and Interpolate custom visitor
 INTERPOLATION_MODULE:BOOL=OFF
 
-//Force new FindPython
-PYBIND11_FINDPYTHON:BOOL=OFF
-
-//Install pybind11 header files?
-PYBIND11_INSTALL:BOOL=OFF
-
-//Override the ABI version, may be used to enable the unstable
-// ABI.
-PYBIND11_INTERNALS_VERSION:STRING=
-
-//Disable search for Python
-PYBIND11_NOPYTHON:BOOL=OFF
-
 //Overwrite cached values read from Python library (classic search).
 // Turn off if cross-compiling and manually setting these values.
 PYBIND11_PYTHONLIBS_OVERWRITE:BOOL=ON
 
 //Python version to use for compiling modules
 PYBIND11_PYTHON_VERSION:STRING=
-
-//Use simpler GIL management logic that does not support disassociation
-PYBIND11_SIMPLE_GIL_MANAGEMENT:BOOL=OFF
-
-//Build pybind11 test suite?
-PYBIND11_TEST:BOOL=OFF
 
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3
@@ -369,6 +336,15 @@ ToolBox_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 ToolBox_SOURCE_DIR:STATIC=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3
+
+//Value Computed by CMake
+alglib_BINARY_DIR:STATIC=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/external/alglib-cpp
+
+//Value Computed by CMake
+alglib_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+alglib_SOURCE_DIR:STATIC=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/external/alglib-cpp
 
 //Value Computed by CMake
 main_interpolation_BINARY_DIR:STATIC=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION
@@ -388,17 +364,8 @@ main_stats_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 main_stats_SOURCE_DIR:STATIC=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/STATISTICS
 
-//Value Computed by CMake
-pybind11_BINARY_DIR:STATIC=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/pybind11-build
-
 //The directory containing a CMake configuration file for pybind11.
 pybind11_DIR:PATH=/home/giovanni/.local/share/cmake/pybind11
-
-//Value Computed by CMake
-pybind11_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-pybind11_SOURCE_DIR:STATIC=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/pybind11-src
 
 
 ########################
@@ -587,7 +554,7 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding PYTHON
 FIND_PACKAGE_MESSAGE_DETAILS_PYTHON:INTERNAL=/usr/bin/python33.10.12
 //Details about finding PythonInterp
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3][v3.10.12(3.6)]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3][v3.10.12(3.7)]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: GIT_EXECUTABLE
@@ -596,7 +563,6 @@ GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 HAS_FLTO:INTERNAL=1
 //Have symbol clock_gettime
 HMDF_HAVE_CLOCK_GETTIME:INTERNAL=1
-PYBIND11_INCLUDE_DIR:INTERNAL=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/pybind11-src/include
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 PYTHON_INCLUDE_DIRS:INTERNAL=/usr/include/python3.10
@@ -610,15 +576,11 @@ PYTHON_MODULE_PREFIX:INTERNAL=
 PYTHON_VERSION:INTERNAL=3.10.12
 PYTHON_VERSION_MAJOR:INTERNAL=3
 PYTHON_VERSION_MINOR:INTERNAL=10
-Python_ADDITIONAL_VERSIONS:INTERNAL=3.11;3.10;3.9;3.8;3.7;3.6
+Python_ADDITIONAL_VERSIONS:INTERNAL=3.12;3.11;3.10;3.9;3.8;3.7
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
 _PYBIND11_CROSSCOMPILING:INTERNAL=OFF
 _Python:INTERNAL=PYTHON
-//True if pybind11 and all required components found on the system
-pybind11_FOUND:INTERNAL=TRUE
-//Directory where pybind11 headers are located
-pybind11_INCLUDE_DIR:INTERNAL=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/pybind11-src/include
 //Directories where pybind11 and possibly Python headers are located
-pybind11_INCLUDE_DIRS:INTERNAL=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/pybind11-src/include;/usr/include/python3.10
+pybind11_INCLUDE_DIRS:INTERNAL=/home/giovanni/.local/include;/usr/include/python3.10
 

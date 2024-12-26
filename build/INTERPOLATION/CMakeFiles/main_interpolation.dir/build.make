@@ -69,239 +69,32 @@ include INTERPOLATION/CMakeFiles/main_interpolation.dir/progress.make
 # Include the compile flags for this target's objects.
 include INTERPOLATION/CMakeFiles/main_interpolation.dir/flags.make
 
-INTERPOLATION/CMakeFiles/main_interpolation.dir/main.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/flags.make
-INTERPOLATION/CMakeFiles/main_interpolation.dir/main.cpp.o: ../INTERPOLATION/main.cpp
-INTERPOLATION/CMakeFiles/main_interpolation.dir/main.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object INTERPOLATION/CMakeFiles/main_interpolation.dir/main.cpp.o"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT INTERPOLATION/CMakeFiles/main_interpolation.dir/main.cpp.o -MF CMakeFiles/main_interpolation.dir/main.cpp.o.d -o CMakeFiles/main_interpolation.dir/main.cpp.o -c /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/INTERPOLATION/main.cpp
+INTERPOLATION/CMakeFiles/main_interpolation.dir/src/main.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/flags.make
+INTERPOLATION/CMakeFiles/main_interpolation.dir/src/main.cpp.o: ../INTERPOLATION/src/main.cpp
+INTERPOLATION/CMakeFiles/main_interpolation.dir/src/main.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object INTERPOLATION/CMakeFiles/main_interpolation.dir/src/main.cpp.o"
+	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT INTERPOLATION/CMakeFiles/main_interpolation.dir/src/main.cpp.o -MF CMakeFiles/main_interpolation.dir/src/main.cpp.o.d -o CMakeFiles/main_interpolation.dir/src/main.cpp.o -c /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/INTERPOLATION/src/main.cpp
 
-INTERPOLATION/CMakeFiles/main_interpolation.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_interpolation.dir/main.cpp.i"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/INTERPOLATION/main.cpp > CMakeFiles/main_interpolation.dir/main.cpp.i
+INTERPOLATION/CMakeFiles/main_interpolation.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_interpolation.dir/src/main.cpp.i"
+	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/INTERPOLATION/src/main.cpp > CMakeFiles/main_interpolation.dir/src/main.cpp.i
 
-INTERPOLATION/CMakeFiles/main_interpolation.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_interpolation.dir/main.cpp.s"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/INTERPOLATION/main.cpp -o CMakeFiles/main_interpolation.dir/main.cpp.s
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibinternal.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/flags.make
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibinternal.cpp.o: _deps/alglib-src/src/alglibinternal.cpp
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibinternal.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibinternal.cpp.o"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibinternal.cpp.o -MF CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibinternal.cpp.o.d -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibinternal.cpp.o -c /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/alglibinternal.cpp
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibinternal.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibinternal.cpp.i"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/alglibinternal.cpp > CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibinternal.cpp.i
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibinternal.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibinternal.cpp.s"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/alglibinternal.cpp -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibinternal.cpp.s
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibmisc.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/flags.make
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibmisc.cpp.o: _deps/alglib-src/src/alglibmisc.cpp
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibmisc.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibmisc.cpp.o"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibmisc.cpp.o -MF CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibmisc.cpp.o.d -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibmisc.cpp.o -c /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/alglibmisc.cpp
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibmisc.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibmisc.cpp.i"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/alglibmisc.cpp > CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibmisc.cpp.i
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibmisc.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibmisc.cpp.s"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/alglibmisc.cpp -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibmisc.cpp.s
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/ap.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/flags.make
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/ap.cpp.o: _deps/alglib-src/src/ap.cpp
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/ap.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/ap.cpp.o"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/ap.cpp.o -MF CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/ap.cpp.o.d -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/ap.cpp.o -c /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/ap.cpp
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/ap.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/ap.cpp.i"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/ap.cpp > CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/ap.cpp.i
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/ap.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/ap.cpp.s"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/ap.cpp -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/ap.cpp.s
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/dataanalysis.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/flags.make
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/dataanalysis.cpp.o: _deps/alglib-src/src/dataanalysis.cpp
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/dataanalysis.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/dataanalysis.cpp.o"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/dataanalysis.cpp.o -MF CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/dataanalysis.cpp.o.d -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/dataanalysis.cpp.o -c /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/dataanalysis.cpp
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/dataanalysis.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/dataanalysis.cpp.i"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/dataanalysis.cpp > CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/dataanalysis.cpp.i
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/dataanalysis.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/dataanalysis.cpp.s"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/dataanalysis.cpp -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/dataanalysis.cpp.s
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/diffequations.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/flags.make
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/diffequations.cpp.o: _deps/alglib-src/src/diffequations.cpp
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/diffequations.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/diffequations.cpp.o"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/diffequations.cpp.o -MF CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/diffequations.cpp.o.d -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/diffequations.cpp.o -c /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/diffequations.cpp
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/diffequations.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/diffequations.cpp.i"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/diffequations.cpp > CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/diffequations.cpp.i
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/diffequations.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/diffequations.cpp.s"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/diffequations.cpp -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/diffequations.cpp.s
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/fasttransforms.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/flags.make
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/fasttransforms.cpp.o: _deps/alglib-src/src/fasttransforms.cpp
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/fasttransforms.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/fasttransforms.cpp.o"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/fasttransforms.cpp.o -MF CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/fasttransforms.cpp.o.d -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/fasttransforms.cpp.o -c /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/fasttransforms.cpp
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/fasttransforms.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/fasttransforms.cpp.i"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/fasttransforms.cpp > CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/fasttransforms.cpp.i
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/fasttransforms.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/fasttransforms.cpp.s"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/fasttransforms.cpp -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/fasttransforms.cpp.s
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/integration.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/flags.make
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/integration.cpp.o: _deps/alglib-src/src/integration.cpp
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/integration.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/integration.cpp.o"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/integration.cpp.o -MF CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/integration.cpp.o.d -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/integration.cpp.o -c /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/integration.cpp
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/integration.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/integration.cpp.i"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/integration.cpp > CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/integration.cpp.i
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/integration.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/integration.cpp.s"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/integration.cpp -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/integration.cpp.s
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/interpolation.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/flags.make
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/interpolation.cpp.o: _deps/alglib-src/src/interpolation.cpp
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/interpolation.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/interpolation.cpp.o"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/interpolation.cpp.o -MF CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/interpolation.cpp.o.d -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/interpolation.cpp.o -c /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/interpolation.cpp
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/interpolation.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/interpolation.cpp.i"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/interpolation.cpp > CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/interpolation.cpp.i
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/interpolation.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/interpolation.cpp.s"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/interpolation.cpp -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/interpolation.cpp.s
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/linalg.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/flags.make
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/linalg.cpp.o: _deps/alglib-src/src/linalg.cpp
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/linalg.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/linalg.cpp.o"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/linalg.cpp.o -MF CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/linalg.cpp.o.d -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/linalg.cpp.o -c /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/linalg.cpp
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/linalg.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/linalg.cpp.i"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/linalg.cpp > CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/linalg.cpp.i
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/linalg.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/linalg.cpp.s"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/linalg.cpp -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/linalg.cpp.s
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/optimization.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/flags.make
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/optimization.cpp.o: _deps/alglib-src/src/optimization.cpp
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/optimization.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/optimization.cpp.o"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/optimization.cpp.o -MF CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/optimization.cpp.o.d -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/optimization.cpp.o -c /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/optimization.cpp
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/optimization.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/optimization.cpp.i"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/optimization.cpp > CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/optimization.cpp.i
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/optimization.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/optimization.cpp.s"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/optimization.cpp -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/optimization.cpp.s
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/solvers.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/flags.make
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/solvers.cpp.o: _deps/alglib-src/src/solvers.cpp
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/solvers.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/solvers.cpp.o"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/solvers.cpp.o -MF CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/solvers.cpp.o.d -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/solvers.cpp.o -c /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/solvers.cpp
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/solvers.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/solvers.cpp.i"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/solvers.cpp > CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/solvers.cpp.i
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/solvers.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/solvers.cpp.s"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/solvers.cpp -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/solvers.cpp.s
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/specialfunctions.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/flags.make
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/specialfunctions.cpp.o: _deps/alglib-src/src/specialfunctions.cpp
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/specialfunctions.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/specialfunctions.cpp.o"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/specialfunctions.cpp.o -MF CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/specialfunctions.cpp.o.d -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/specialfunctions.cpp.o -c /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/specialfunctions.cpp
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/specialfunctions.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/specialfunctions.cpp.i"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/specialfunctions.cpp > CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/specialfunctions.cpp.i
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/specialfunctions.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/specialfunctions.cpp.s"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/specialfunctions.cpp -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/specialfunctions.cpp.s
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/statistics.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/flags.make
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/statistics.cpp.o: _deps/alglib-src/src/statistics.cpp
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/statistics.cpp.o: INTERPOLATION/CMakeFiles/main_interpolation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/statistics.cpp.o"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/statistics.cpp.o -MF CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/statistics.cpp.o.d -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/statistics.cpp.o -c /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/statistics.cpp
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/statistics.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/statistics.cpp.i"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/statistics.cpp > CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/statistics.cpp.i
-
-INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/statistics.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/statistics.cpp.s"
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/alglib-src/src/statistics.cpp -o CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/statistics.cpp.s
+INTERPOLATION/CMakeFiles/main_interpolation.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_interpolation.dir/src/main.cpp.s"
+	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/INTERPOLATION/src/main.cpp -o CMakeFiles/main_interpolation.dir/src/main.cpp.s
 
 # Object files for target main_interpolation
 main_interpolation_OBJECTS = \
-"CMakeFiles/main_interpolation.dir/main.cpp.o" \
-"CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibinternal.cpp.o" \
-"CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibmisc.cpp.o" \
-"CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/ap.cpp.o" \
-"CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/dataanalysis.cpp.o" \
-"CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/diffequations.cpp.o" \
-"CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/fasttransforms.cpp.o" \
-"CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/integration.cpp.o" \
-"CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/interpolation.cpp.o" \
-"CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/linalg.cpp.o" \
-"CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/optimization.cpp.o" \
-"CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/solvers.cpp.o" \
-"CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/specialfunctions.cpp.o" \
-"CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/statistics.cpp.o"
+"CMakeFiles/main_interpolation.dir/src/main.cpp.o"
 
 # External object files for target main_interpolation
 main_interpolation_EXTERNAL_OBJECTS =
 
-INTERPOLATION/main_interpolation: INTERPOLATION/CMakeFiles/main_interpolation.dir/main.cpp.o
-INTERPOLATION/main_interpolation: INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibinternal.cpp.o
-INTERPOLATION/main_interpolation: INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibmisc.cpp.o
-INTERPOLATION/main_interpolation: INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/ap.cpp.o
-INTERPOLATION/main_interpolation: INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/dataanalysis.cpp.o
-INTERPOLATION/main_interpolation: INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/diffequations.cpp.o
-INTERPOLATION/main_interpolation: INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/fasttransforms.cpp.o
-INTERPOLATION/main_interpolation: INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/integration.cpp.o
-INTERPOLATION/main_interpolation: INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/interpolation.cpp.o
-INTERPOLATION/main_interpolation: INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/linalg.cpp.o
-INTERPOLATION/main_interpolation: INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/optimization.cpp.o
-INTERPOLATION/main_interpolation: INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/solvers.cpp.o
-INTERPOLATION/main_interpolation: INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/specialfunctions.cpp.o
-INTERPOLATION/main_interpolation: INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/statistics.cpp.o
+INTERPOLATION/main_interpolation: INTERPOLATION/CMakeFiles/main_interpolation.dir/src/main.cpp.o
 INTERPOLATION/main_interpolation: INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make
+INTERPOLATION/main_interpolation: external/alglib-cpp/libalglib.a
 INTERPOLATION/main_interpolation: INTERPOLATION/CMakeFiles/main_interpolation.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable main_interpolation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable main_interpolation"
 	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/INTERPOLATION && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main_interpolation.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

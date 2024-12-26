@@ -37,8 +37,9 @@ class CMakeBuild(build_ext):
 
         if "CMAKE_ARGS" in os.environ:
             cmake_args += [item for item in os.environ["CMAKE_ARGS"].split(" ") if item]
-
-        build_args = []
+        # if os.getenv("INTERPOLATION_MODULE") == "ON":
+        #     cmake_args.append("-DINTERPOLATION_MODULE=ON")
+        # build_args = []
 
         # Set CMAKE_BUILD_PARALLEL_LEVEL to control the parallel build level
         # across all generators.
@@ -63,11 +64,11 @@ class CMakeBuild(build_ext):
 # The information here can also be placed in setup.cfg - better separation of
 # logic and declaration, and simpler if you include description/version in a file.
 setup(
-    name="DataFrameWrapperPy",
+    name="DataFrameWrapper",
     version="0.0.1",
     description="A DataFrame wrapper integration for python",
     long_description="",
-    ext_modules=[CMakeExtension("bindings")],
+    ext_modules=[CMakeExtension("DataFrameWrapper")],
     cmdclass={"build_ext": CMakeBuild},
     zip_safe=False,
 )

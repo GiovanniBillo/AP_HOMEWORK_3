@@ -162,32 +162,18 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-INTERPOLATION/CMakeFiles/Interpolation.dir/rule:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERPOLATION/CMakeFiles/Interpolation.dir/rule
-.PHONY : INTERPOLATION/CMakeFiles/Interpolation.dir/rule
+INTERPOLATION/CMakeFiles/InterpolateWrapper.dir/rule:
+	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERPOLATION/CMakeFiles/InterpolateWrapper.dir/rule
+.PHONY : INTERPOLATION/CMakeFiles/InterpolateWrapper.dir/rule
 
 # Convenience name for target.
-Interpolation: INTERPOLATION/CMakeFiles/Interpolation.dir/rule
-.PHONY : Interpolation
+InterpolateWrapper: INTERPOLATION/CMakeFiles/InterpolateWrapper.dir/rule
+.PHONY : InterpolateWrapper
 
 # fast build rule for target.
-Interpolation/fast:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/Interpolation.dir/build.make INTERPOLATION/CMakeFiles/Interpolation.dir/build
-.PHONY : Interpolation/fast
-
-# Convenience name for target.
-INTERPOLATION/CMakeFiles/InterpolationPython.dir/rule:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INTERPOLATION/CMakeFiles/InterpolationPython.dir/rule
-.PHONY : INTERPOLATION/CMakeFiles/InterpolationPython.dir/rule
-
-# Convenience name for target.
-InterpolationPython: INTERPOLATION/CMakeFiles/InterpolationPython.dir/rule
-.PHONY : InterpolationPython
-
-# fast build rule for target.
-InterpolationPython/fast:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/build
-.PHONY : InterpolationPython/fast
+InterpolateWrapper/fast:
+	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolateWrapper.dir/build.make INTERPOLATION/CMakeFiles/InterpolateWrapper.dir/build
+.PHONY : InterpolateWrapper/fast
 
 # Convenience name for target.
 INTERPOLATION/CMakeFiles/main_interpolation.dir/rule:
@@ -203,431 +189,53 @@ main_interpolation/fast:
 	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/build
 .PHONY : main_interpolation/fast
 
-__/_deps/alglib-src/src/alglibinternal.o: __/_deps/alglib-src/src/alglibinternal.cpp.o
-.PHONY : __/_deps/alglib-src/src/alglibinternal.o
+src/bindings.o: src/bindings.cpp.o
+.PHONY : src/bindings.o
 
 # target to build an object file
-__/_deps/alglib-src/src/alglibinternal.cpp.o:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/alglibinternal.cpp.o
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibinternal.cpp.o
-.PHONY : __/_deps/alglib-src/src/alglibinternal.cpp.o
+src/bindings.cpp.o:
+	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolateWrapper.dir/build.make INTERPOLATION/CMakeFiles/InterpolateWrapper.dir/src/bindings.cpp.o
+.PHONY : src/bindings.cpp.o
 
-__/_deps/alglib-src/src/alglibinternal.i: __/_deps/alglib-src/src/alglibinternal.cpp.i
-.PHONY : __/_deps/alglib-src/src/alglibinternal.i
+src/bindings.i: src/bindings.cpp.i
+.PHONY : src/bindings.i
 
 # target to preprocess a source file
-__/_deps/alglib-src/src/alglibinternal.cpp.i:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/alglibinternal.cpp.i
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibinternal.cpp.i
-.PHONY : __/_deps/alglib-src/src/alglibinternal.cpp.i
+src/bindings.cpp.i:
+	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolateWrapper.dir/build.make INTERPOLATION/CMakeFiles/InterpolateWrapper.dir/src/bindings.cpp.i
+.PHONY : src/bindings.cpp.i
 
-__/_deps/alglib-src/src/alglibinternal.s: __/_deps/alglib-src/src/alglibinternal.cpp.s
-.PHONY : __/_deps/alglib-src/src/alglibinternal.s
+src/bindings.s: src/bindings.cpp.s
+.PHONY : src/bindings.s
 
 # target to generate assembly for a file
-__/_deps/alglib-src/src/alglibinternal.cpp.s:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/alglibinternal.cpp.s
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibinternal.cpp.s
-.PHONY : __/_deps/alglib-src/src/alglibinternal.cpp.s
+src/bindings.cpp.s:
+	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolateWrapper.dir/build.make INTERPOLATION/CMakeFiles/InterpolateWrapper.dir/src/bindings.cpp.s
+.PHONY : src/bindings.cpp.s
 
-__/_deps/alglib-src/src/alglibmisc.o: __/_deps/alglib-src/src/alglibmisc.cpp.o
-.PHONY : __/_deps/alglib-src/src/alglibmisc.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-__/_deps/alglib-src/src/alglibmisc.cpp.o:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/alglibmisc.cpp.o
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibmisc.cpp.o
-.PHONY : __/_deps/alglib-src/src/alglibmisc.cpp.o
+src/main.cpp.o:
+	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-__/_deps/alglib-src/src/alglibmisc.i: __/_deps/alglib-src/src/alglibmisc.cpp.i
-.PHONY : __/_deps/alglib-src/src/alglibmisc.i
-
-# target to preprocess a source file
-__/_deps/alglib-src/src/alglibmisc.cpp.i:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/alglibmisc.cpp.i
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibmisc.cpp.i
-.PHONY : __/_deps/alglib-src/src/alglibmisc.cpp.i
-
-__/_deps/alglib-src/src/alglibmisc.s: __/_deps/alglib-src/src/alglibmisc.cpp.s
-.PHONY : __/_deps/alglib-src/src/alglibmisc.s
-
-# target to generate assembly for a file
-__/_deps/alglib-src/src/alglibmisc.cpp.s:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/alglibmisc.cpp.s
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/alglibmisc.cpp.s
-.PHONY : __/_deps/alglib-src/src/alglibmisc.cpp.s
-
-__/_deps/alglib-src/src/ap.o: __/_deps/alglib-src/src/ap.cpp.o
-.PHONY : __/_deps/alglib-src/src/ap.o
-
-# target to build an object file
-__/_deps/alglib-src/src/ap.cpp.o:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/ap.cpp.o
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/ap.cpp.o
-.PHONY : __/_deps/alglib-src/src/ap.cpp.o
-
-__/_deps/alglib-src/src/ap.i: __/_deps/alglib-src/src/ap.cpp.i
-.PHONY : __/_deps/alglib-src/src/ap.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-__/_deps/alglib-src/src/ap.cpp.i:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/ap.cpp.i
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/ap.cpp.i
-.PHONY : __/_deps/alglib-src/src/ap.cpp.i
+src/main.cpp.i:
+	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-__/_deps/alglib-src/src/ap.s: __/_deps/alglib-src/src/ap.cpp.s
-.PHONY : __/_deps/alglib-src/src/ap.s
-
-# target to generate assembly for a file
-__/_deps/alglib-src/src/ap.cpp.s:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/ap.cpp.s
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/ap.cpp.s
-.PHONY : __/_deps/alglib-src/src/ap.cpp.s
-
-__/_deps/alglib-src/src/dataanalysis.o: __/_deps/alglib-src/src/dataanalysis.cpp.o
-.PHONY : __/_deps/alglib-src/src/dataanalysis.o
-
-# target to build an object file
-__/_deps/alglib-src/src/dataanalysis.cpp.o:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/dataanalysis.cpp.o
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/dataanalysis.cpp.o
-.PHONY : __/_deps/alglib-src/src/dataanalysis.cpp.o
-
-__/_deps/alglib-src/src/dataanalysis.i: __/_deps/alglib-src/src/dataanalysis.cpp.i
-.PHONY : __/_deps/alglib-src/src/dataanalysis.i
-
-# target to preprocess a source file
-__/_deps/alglib-src/src/dataanalysis.cpp.i:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/dataanalysis.cpp.i
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/dataanalysis.cpp.i
-.PHONY : __/_deps/alglib-src/src/dataanalysis.cpp.i
-
-__/_deps/alglib-src/src/dataanalysis.s: __/_deps/alglib-src/src/dataanalysis.cpp.s
-.PHONY : __/_deps/alglib-src/src/dataanalysis.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-__/_deps/alglib-src/src/dataanalysis.cpp.s:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/dataanalysis.cpp.s
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/dataanalysis.cpp.s
-.PHONY : __/_deps/alglib-src/src/dataanalysis.cpp.s
-
-__/_deps/alglib-src/src/diffequations.o: __/_deps/alglib-src/src/diffequations.cpp.o
-.PHONY : __/_deps/alglib-src/src/diffequations.o
-
-# target to build an object file
-__/_deps/alglib-src/src/diffequations.cpp.o:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/diffequations.cpp.o
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/diffequations.cpp.o
-.PHONY : __/_deps/alglib-src/src/diffequations.cpp.o
-
-__/_deps/alglib-src/src/diffequations.i: __/_deps/alglib-src/src/diffequations.cpp.i
-.PHONY : __/_deps/alglib-src/src/diffequations.i
-
-# target to preprocess a source file
-__/_deps/alglib-src/src/diffequations.cpp.i:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/diffequations.cpp.i
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/diffequations.cpp.i
-.PHONY : __/_deps/alglib-src/src/diffequations.cpp.i
-
-__/_deps/alglib-src/src/diffequations.s: __/_deps/alglib-src/src/diffequations.cpp.s
-.PHONY : __/_deps/alglib-src/src/diffequations.s
-
-# target to generate assembly for a file
-__/_deps/alglib-src/src/diffequations.cpp.s:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/diffequations.cpp.s
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/diffequations.cpp.s
-.PHONY : __/_deps/alglib-src/src/diffequations.cpp.s
-
-__/_deps/alglib-src/src/fasttransforms.o: __/_deps/alglib-src/src/fasttransforms.cpp.o
-.PHONY : __/_deps/alglib-src/src/fasttransforms.o
-
-# target to build an object file
-__/_deps/alglib-src/src/fasttransforms.cpp.o:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/fasttransforms.cpp.o
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/fasttransforms.cpp.o
-.PHONY : __/_deps/alglib-src/src/fasttransforms.cpp.o
-
-__/_deps/alglib-src/src/fasttransforms.i: __/_deps/alglib-src/src/fasttransforms.cpp.i
-.PHONY : __/_deps/alglib-src/src/fasttransforms.i
-
-# target to preprocess a source file
-__/_deps/alglib-src/src/fasttransforms.cpp.i:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/fasttransforms.cpp.i
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/fasttransforms.cpp.i
-.PHONY : __/_deps/alglib-src/src/fasttransforms.cpp.i
-
-__/_deps/alglib-src/src/fasttransforms.s: __/_deps/alglib-src/src/fasttransforms.cpp.s
-.PHONY : __/_deps/alglib-src/src/fasttransforms.s
-
-# target to generate assembly for a file
-__/_deps/alglib-src/src/fasttransforms.cpp.s:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/fasttransforms.cpp.s
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/fasttransforms.cpp.s
-.PHONY : __/_deps/alglib-src/src/fasttransforms.cpp.s
-
-__/_deps/alglib-src/src/integration.o: __/_deps/alglib-src/src/integration.cpp.o
-.PHONY : __/_deps/alglib-src/src/integration.o
-
-# target to build an object file
-__/_deps/alglib-src/src/integration.cpp.o:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/integration.cpp.o
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/integration.cpp.o
-.PHONY : __/_deps/alglib-src/src/integration.cpp.o
-
-__/_deps/alglib-src/src/integration.i: __/_deps/alglib-src/src/integration.cpp.i
-.PHONY : __/_deps/alglib-src/src/integration.i
-
-# target to preprocess a source file
-__/_deps/alglib-src/src/integration.cpp.i:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/integration.cpp.i
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/integration.cpp.i
-.PHONY : __/_deps/alglib-src/src/integration.cpp.i
-
-__/_deps/alglib-src/src/integration.s: __/_deps/alglib-src/src/integration.cpp.s
-.PHONY : __/_deps/alglib-src/src/integration.s
-
-# target to generate assembly for a file
-__/_deps/alglib-src/src/integration.cpp.s:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/integration.cpp.s
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/integration.cpp.s
-.PHONY : __/_deps/alglib-src/src/integration.cpp.s
-
-__/_deps/alglib-src/src/interpolation.o: __/_deps/alglib-src/src/interpolation.cpp.o
-.PHONY : __/_deps/alglib-src/src/interpolation.o
-
-# target to build an object file
-__/_deps/alglib-src/src/interpolation.cpp.o:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/interpolation.cpp.o
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/interpolation.cpp.o
-.PHONY : __/_deps/alglib-src/src/interpolation.cpp.o
-
-__/_deps/alglib-src/src/interpolation.i: __/_deps/alglib-src/src/interpolation.cpp.i
-.PHONY : __/_deps/alglib-src/src/interpolation.i
-
-# target to preprocess a source file
-__/_deps/alglib-src/src/interpolation.cpp.i:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/interpolation.cpp.i
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/interpolation.cpp.i
-.PHONY : __/_deps/alglib-src/src/interpolation.cpp.i
-
-__/_deps/alglib-src/src/interpolation.s: __/_deps/alglib-src/src/interpolation.cpp.s
-.PHONY : __/_deps/alglib-src/src/interpolation.s
-
-# target to generate assembly for a file
-__/_deps/alglib-src/src/interpolation.cpp.s:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/interpolation.cpp.s
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/interpolation.cpp.s
-.PHONY : __/_deps/alglib-src/src/interpolation.cpp.s
-
-__/_deps/alglib-src/src/linalg.o: __/_deps/alglib-src/src/linalg.cpp.o
-.PHONY : __/_deps/alglib-src/src/linalg.o
-
-# target to build an object file
-__/_deps/alglib-src/src/linalg.cpp.o:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/linalg.cpp.o
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/linalg.cpp.o
-.PHONY : __/_deps/alglib-src/src/linalg.cpp.o
-
-__/_deps/alglib-src/src/linalg.i: __/_deps/alglib-src/src/linalg.cpp.i
-.PHONY : __/_deps/alglib-src/src/linalg.i
-
-# target to preprocess a source file
-__/_deps/alglib-src/src/linalg.cpp.i:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/linalg.cpp.i
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/linalg.cpp.i
-.PHONY : __/_deps/alglib-src/src/linalg.cpp.i
-
-__/_deps/alglib-src/src/linalg.s: __/_deps/alglib-src/src/linalg.cpp.s
-.PHONY : __/_deps/alglib-src/src/linalg.s
-
-# target to generate assembly for a file
-__/_deps/alglib-src/src/linalg.cpp.s:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/linalg.cpp.s
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/linalg.cpp.s
-.PHONY : __/_deps/alglib-src/src/linalg.cpp.s
-
-__/_deps/alglib-src/src/optimization.o: __/_deps/alglib-src/src/optimization.cpp.o
-.PHONY : __/_deps/alglib-src/src/optimization.o
-
-# target to build an object file
-__/_deps/alglib-src/src/optimization.cpp.o:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/optimization.cpp.o
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/optimization.cpp.o
-.PHONY : __/_deps/alglib-src/src/optimization.cpp.o
-
-__/_deps/alglib-src/src/optimization.i: __/_deps/alglib-src/src/optimization.cpp.i
-.PHONY : __/_deps/alglib-src/src/optimization.i
-
-# target to preprocess a source file
-__/_deps/alglib-src/src/optimization.cpp.i:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/optimization.cpp.i
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/optimization.cpp.i
-.PHONY : __/_deps/alglib-src/src/optimization.cpp.i
-
-__/_deps/alglib-src/src/optimization.s: __/_deps/alglib-src/src/optimization.cpp.s
-.PHONY : __/_deps/alglib-src/src/optimization.s
-
-# target to generate assembly for a file
-__/_deps/alglib-src/src/optimization.cpp.s:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/optimization.cpp.s
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/optimization.cpp.s
-.PHONY : __/_deps/alglib-src/src/optimization.cpp.s
-
-__/_deps/alglib-src/src/solvers.o: __/_deps/alglib-src/src/solvers.cpp.o
-.PHONY : __/_deps/alglib-src/src/solvers.o
-
-# target to build an object file
-__/_deps/alglib-src/src/solvers.cpp.o:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/solvers.cpp.o
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/solvers.cpp.o
-.PHONY : __/_deps/alglib-src/src/solvers.cpp.o
-
-__/_deps/alglib-src/src/solvers.i: __/_deps/alglib-src/src/solvers.cpp.i
-.PHONY : __/_deps/alglib-src/src/solvers.i
-
-# target to preprocess a source file
-__/_deps/alglib-src/src/solvers.cpp.i:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/solvers.cpp.i
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/solvers.cpp.i
-.PHONY : __/_deps/alglib-src/src/solvers.cpp.i
-
-__/_deps/alglib-src/src/solvers.s: __/_deps/alglib-src/src/solvers.cpp.s
-.PHONY : __/_deps/alglib-src/src/solvers.s
-
-# target to generate assembly for a file
-__/_deps/alglib-src/src/solvers.cpp.s:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/solvers.cpp.s
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/solvers.cpp.s
-.PHONY : __/_deps/alglib-src/src/solvers.cpp.s
-
-__/_deps/alglib-src/src/specialfunctions.o: __/_deps/alglib-src/src/specialfunctions.cpp.o
-.PHONY : __/_deps/alglib-src/src/specialfunctions.o
-
-# target to build an object file
-__/_deps/alglib-src/src/specialfunctions.cpp.o:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/specialfunctions.cpp.o
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/specialfunctions.cpp.o
-.PHONY : __/_deps/alglib-src/src/specialfunctions.cpp.o
-
-__/_deps/alglib-src/src/specialfunctions.i: __/_deps/alglib-src/src/specialfunctions.cpp.i
-.PHONY : __/_deps/alglib-src/src/specialfunctions.i
-
-# target to preprocess a source file
-__/_deps/alglib-src/src/specialfunctions.cpp.i:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/specialfunctions.cpp.i
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/specialfunctions.cpp.i
-.PHONY : __/_deps/alglib-src/src/specialfunctions.cpp.i
-
-__/_deps/alglib-src/src/specialfunctions.s: __/_deps/alglib-src/src/specialfunctions.cpp.s
-.PHONY : __/_deps/alglib-src/src/specialfunctions.s
-
-# target to generate assembly for a file
-__/_deps/alglib-src/src/specialfunctions.cpp.s:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/specialfunctions.cpp.s
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/specialfunctions.cpp.s
-.PHONY : __/_deps/alglib-src/src/specialfunctions.cpp.s
-
-__/_deps/alglib-src/src/statistics.o: __/_deps/alglib-src/src/statistics.cpp.o
-.PHONY : __/_deps/alglib-src/src/statistics.o
-
-# target to build an object file
-__/_deps/alglib-src/src/statistics.cpp.o:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/statistics.cpp.o
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/statistics.cpp.o
-.PHONY : __/_deps/alglib-src/src/statistics.cpp.o
-
-__/_deps/alglib-src/src/statistics.i: __/_deps/alglib-src/src/statistics.cpp.i
-.PHONY : __/_deps/alglib-src/src/statistics.i
-
-# target to preprocess a source file
-__/_deps/alglib-src/src/statistics.cpp.i:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/statistics.cpp.i
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/statistics.cpp.i
-.PHONY : __/_deps/alglib-src/src/statistics.cpp.i
-
-__/_deps/alglib-src/src/statistics.s: __/_deps/alglib-src/src/statistics.cpp.s
-.PHONY : __/_deps/alglib-src/src/statistics.s
-
-# target to generate assembly for a file
-__/_deps/alglib-src/src/statistics.cpp.s:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/__/_deps/alglib-src/src/statistics.cpp.s
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/__/_deps/alglib-src/src/statistics.cpp.s
-.PHONY : __/_deps/alglib-src/src/statistics.cpp.s
-
-bindings.o: bindings.cpp.o
-.PHONY : bindings.o
-
-# target to build an object file
-bindings.cpp.o:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/bindings.cpp.o
-.PHONY : bindings.cpp.o
-
-bindings.i: bindings.cpp.i
-.PHONY : bindings.i
-
-# target to preprocess a source file
-bindings.cpp.i:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/bindings.cpp.i
-.PHONY : bindings.cpp.i
-
-bindings.s: bindings.cpp.s
-.PHONY : bindings.s
-
-# target to generate assembly for a file
-bindings.cpp.s:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/bindings.cpp.s
-.PHONY : bindings.cpp.s
-
-helpers.o: helpers.cpp.o
-.PHONY : helpers.o
-
-# target to build an object file
-helpers.cpp.o:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/Interpolation.dir/build.make INTERPOLATION/CMakeFiles/Interpolation.dir/helpers.cpp.o
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/helpers.cpp.o
-.PHONY : helpers.cpp.o
-
-helpers.i: helpers.cpp.i
-.PHONY : helpers.i
-
-# target to preprocess a source file
-helpers.cpp.i:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/Interpolation.dir/build.make INTERPOLATION/CMakeFiles/Interpolation.dir/helpers.cpp.i
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/helpers.cpp.i
-.PHONY : helpers.cpp.i
-
-helpers.s: helpers.cpp.s
-.PHONY : helpers.s
-
-# target to generate assembly for a file
-helpers.cpp.s:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/Interpolation.dir/build.make INTERPOLATION/CMakeFiles/Interpolation.dir/helpers.cpp.s
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/InterpolationPython.dir/build.make INTERPOLATION/CMakeFiles/InterpolationPython.dir/helpers.cpp.s
-.PHONY : helpers.cpp.s
-
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	cd /home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build && $(MAKE) $(MAKESILENT) -f INTERPOLATION/CMakeFiles/main_interpolation.dir/build.make INTERPOLATION/CMakeFiles/main_interpolation.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -641,57 +249,14 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... Interpolation"
-	@echo "... InterpolationPython"
+	@echo "... InterpolateWrapper"
 	@echo "... main_interpolation"
-	@echo "... __/_deps/alglib-src/src/alglibinternal.o"
-	@echo "... __/_deps/alglib-src/src/alglibinternal.i"
-	@echo "... __/_deps/alglib-src/src/alglibinternal.s"
-	@echo "... __/_deps/alglib-src/src/alglibmisc.o"
-	@echo "... __/_deps/alglib-src/src/alglibmisc.i"
-	@echo "... __/_deps/alglib-src/src/alglibmisc.s"
-	@echo "... __/_deps/alglib-src/src/ap.o"
-	@echo "... __/_deps/alglib-src/src/ap.i"
-	@echo "... __/_deps/alglib-src/src/ap.s"
-	@echo "... __/_deps/alglib-src/src/dataanalysis.o"
-	@echo "... __/_deps/alglib-src/src/dataanalysis.i"
-	@echo "... __/_deps/alglib-src/src/dataanalysis.s"
-	@echo "... __/_deps/alglib-src/src/diffequations.o"
-	@echo "... __/_deps/alglib-src/src/diffequations.i"
-	@echo "... __/_deps/alglib-src/src/diffequations.s"
-	@echo "... __/_deps/alglib-src/src/fasttransforms.o"
-	@echo "... __/_deps/alglib-src/src/fasttransforms.i"
-	@echo "... __/_deps/alglib-src/src/fasttransforms.s"
-	@echo "... __/_deps/alglib-src/src/integration.o"
-	@echo "... __/_deps/alglib-src/src/integration.i"
-	@echo "... __/_deps/alglib-src/src/integration.s"
-	@echo "... __/_deps/alglib-src/src/interpolation.o"
-	@echo "... __/_deps/alglib-src/src/interpolation.i"
-	@echo "... __/_deps/alglib-src/src/interpolation.s"
-	@echo "... __/_deps/alglib-src/src/linalg.o"
-	@echo "... __/_deps/alglib-src/src/linalg.i"
-	@echo "... __/_deps/alglib-src/src/linalg.s"
-	@echo "... __/_deps/alglib-src/src/optimization.o"
-	@echo "... __/_deps/alglib-src/src/optimization.i"
-	@echo "... __/_deps/alglib-src/src/optimization.s"
-	@echo "... __/_deps/alglib-src/src/solvers.o"
-	@echo "... __/_deps/alglib-src/src/solvers.i"
-	@echo "... __/_deps/alglib-src/src/solvers.s"
-	@echo "... __/_deps/alglib-src/src/specialfunctions.o"
-	@echo "... __/_deps/alglib-src/src/specialfunctions.i"
-	@echo "... __/_deps/alglib-src/src/specialfunctions.s"
-	@echo "... __/_deps/alglib-src/src/statistics.o"
-	@echo "... __/_deps/alglib-src/src/statistics.i"
-	@echo "... __/_deps/alglib-src/src/statistics.s"
-	@echo "... bindings.o"
-	@echo "... bindings.i"
-	@echo "... bindings.s"
-	@echo "... helpers.o"
-	@echo "... helpers.i"
-	@echo "... helpers.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/bindings.o"
+	@echo "... src/bindings.i"
+	@echo "... src/bindings.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

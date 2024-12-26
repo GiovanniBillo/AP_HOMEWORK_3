@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DDATA_DIR=\"/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/STATISTICS/data\" -DDataFrameWrapper_EXPORTS
 
-CXX_INCLUDES = -I/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/include -I/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/dataframe-src/include -isystem /home/giovanni/.local/include -isystem /usr/include/python3.10
+CXX_INCLUDES = -I/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/STATISTICS/include -I/home/giovanni/Documents/uni/master/UNITS/DSAI/Advanced_Programming/homework3/build/_deps/dataframe-src/include -isystem /home/giovanni/.local/include -isystem /usr/include/python3.10
 
 CXX_FLAGS =  -g -fPIC -g -fPIC -fvisibility=hidden -std=gnu++23
 
