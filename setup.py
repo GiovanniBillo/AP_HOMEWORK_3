@@ -16,7 +16,10 @@ class CMakeExtension(Extension):
 
 class CMakeBuild(build_ext):
     def build_extension(self, ext):
-        extdir = os.path.abspath(os.path.dirname(self.get_ext_fullpath(ext.name)))
+        package_dir = os.path.join(os.path.dirname(__file__), "ToolBox")
+        extdir = os.path.abspath(package_dir)
+
+        # extdir = os.path.abspath(os.path.dirname(self.get_ext_fullpath(ext.name)))
 
         # required for auto-detection of auxiliary "native" libs
         if not extdir.endswith(os.path.sep):
@@ -52,13 +55,35 @@ class CMakeBuild(build_ext):
 
         if not os.path.exists(self.build_temp):
             os.makedirs(self.build_temp)
+        # Create a unique build directory for each extension
+
+        build_temp = os.path.join(self.build_temp, ext.name.replace(".", "_"))
+        os.makedirs(build_temp, exist_ok=True)
 
         subprocess.check_call(
-            ["cmake", ext.sourcedir] + cmake_args, cwd=self.build_temp
+            ["cmake", ext.sourcedir] + cmake_args, cwd=build_temp
         )
         subprocess.check_call(
-            ["cmake", "--build", "."] + build_args, cwd=self.build_temp
+            ["cmake", "--build", "."] + build_args, cwd=build_temp
         )
+        
+        # Ensure proper package structure for shared libraries
+        lib_output_dir = os.path.join(extdir, "ToolBox")
+        os.makedirs(lib_output_dir, exist_ok=True)
+        self._copy_shared_libraries(lib_output_dir)
+
+
+    def _copy_shared_libraries(self, lib_output_dir):
+        # Move all shared libraries to the ToolBox/ directory
+        for root, _, files in os.walk(self.build_temp):
+            for file in files:
+                if file.endswith(".so"):
+                    src_path = os.path.join(root, file)
+                    dst_path = os.path.join(lib_output_dir, file)
+                    os.rename(src_path, dst_path)
+                    print(f"Moved {src_path} -> {dst_path}")
+
+
 
 
 # The information here can also be placed in setup.cfg - better separation of
@@ -68,7 +93,11 @@ setup(
     version="0.0.1",
     description="A DataFrame wrapper integration for python",
     long_description="",
-    ext_modules=[CMakeExtension("ToolBox")],
+    ext_modules=[CMakeExtension("DataFrameWrapper", sourcedir="STATISTICS"),
+                 CMakeExtension("InterpolateWrapper", sourcedir="INTERPOLATION")
+                 ],
     cmdclass={"build_ext": CMakeBuild},
+    packages=["ToolBox"],
+    package_dir={"ToolBox": "ToolBox"},
     zip_safe=False,
 )
