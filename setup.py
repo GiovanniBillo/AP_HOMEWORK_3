@@ -2,7 +2,7 @@ import os
 import sys
 import subprocess
 
-from setuptools import setup, Extension
+from setuptools import setup, Extension, Command
 from setuptools.command.build_ext import build_ext
 
 # A CMakeExtension needs a sourcedir instead of a file list.
@@ -70,6 +70,13 @@ class CMakeBuild(build_ext):
         # Ensure proper package structure for shared libraries
         lib_output_dir = os.path.join(extdir, "ToolBox")
         os.makedirs(lib_output_dir, exist_ok=True)
+        init_file = os.path.join(lib_output_dir, "__init__.py")
+        if not os.path.exists(init_file):
+            with open(init_file, "w") as f:
+                f.write("# Automatically created __init__.py\n")
+            print(f"Created {init_file}")
+        else:
+            print(f"{init_file} already exists")
         self._copy_shared_libraries(lib_output_dir)
 
 
@@ -83,6 +90,19 @@ class CMakeBuild(build_ext):
                     os.rename(src_path, dst_path)
                     print(f"Moved {src_path} -> {dst_path}")
 
+class WatchTestsCommand(Command):
+    """Custom command to run pytest-watch (ptw)"""
+    description = "Run pytest-watch to monitor changes and rerun tests automatically"
+    user_options = []
+
+    def initialize_options(self):
+        pass
+
+    def finalize_options(self):
+        pass
+
+    def run(self):
+        os.system("ptw")  # Runs pytest-watch
 
 
 
@@ -96,7 +116,13 @@ setup(
     ext_modules=[CMakeExtension("DataFrameWrapper", sourcedir="STATISTICS"),
                  CMakeExtension("InterpolateWrapper", sourcedir="INTERPOLATION")
                  ],
-    cmdclass={"build_ext": CMakeBuild},
+    install_requires=[
+        "pytest",
+        "pytest-watch",
+    ],
+    cmdclass={"build_ext": CMakeBuild,
+              "watch_tests": WatchTestsCommand,  # Register the custom command
+              },
     packages=["ToolBox"],
     package_dir={"ToolBox": "ToolBox"},
     zip_safe=False,

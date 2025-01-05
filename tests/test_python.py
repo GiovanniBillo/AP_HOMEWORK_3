@@ -144,7 +144,7 @@ def test_lagrange_interpolator(lagrange):
     # Define the test function
     f = lambda i: 1 / np.arctan(1 + (i * i))
 
-    y = [f(x) for x in x_casual]
+    y = [f(x) for x in x_equid]
 
     # Build the interpolating polynomial
     lagrange.build(x_casual, y, len(y), lb, ub)  # Adjust method signature as necessary

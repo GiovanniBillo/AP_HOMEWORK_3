@@ -1,6 +1,5 @@
-## small change to test ptw 
 from ToolBox.DataFrameWrapper import DataFrameWrapperInt, DataFrameWrapperStr, DataFrameWrapperDouble, check_condition
-from ToolBox.InterpolateWrapper import Interpolator, LinearInterpolator, LagrangeInterpolator, SplineInterpolator 
+from ToolBox.InterpolateWrapper import Interpolator
 from random import sample, uniform 
 import csv
 import os
@@ -24,8 +23,8 @@ def casual_vec(n, lb, ub):
     """
     Generate a list of `n` unique random points between `lb` and `ub`.
     """
-    if n > (ub - lb):  # Ensure we can generate `n` unique numbers in the range
-        raise ValueError("Cannot generate more unique points than the range size.")
+    # if n > (ub - lb):  # Ensure we can generate `n` unique numbers in the range
+    #     raise ValueError("Cannot generate more unique points than the range size.")
 
     unique_numbers = set()
     while len(unique_numbers) < n:
@@ -75,20 +74,6 @@ def reduce_dfw(dfw, *colnames, data_dir = "data", input_filename = "reduced_data
    new_dfw = DataFrameWrapperInt(input_filename, output_filename)
    new_dfw.load_and_read_file()
    return new_dfw
-
-
-
-# @timer
-# def compare_efficiency(data_dir = "data", filename="ranking.csv"):
-#     '''
-#     Compare the efficiency of the program (C++ code bound to python) vs some python libraries/standard operations
-#     By default, a very large (~10000) dataset is considered).
-
-#     '''
-#    rankings = os.path.join(filename)
-#    dfw_rankings = DataFrameWrapperInt(filename, filename + "_out")
-#    dfw_rankings.load_and_read_file()
-
 
 class Enhance:
     def __init__(self, wrapper):
@@ -178,69 +163,16 @@ class Enhance:
         else:
             plt.savefig("plot.png")
 
-def get_interpolation_method_error(wrapper, method_name, max_points = 10, vec_func = fill_x_equid, y_func = lambda x: math.sin(x), lb = 0.0, ub = 3.14):
+def get_interpolation_method_error(wrapper, method_name, vec_func, max_points = 10, y_func = lambda x: math.sin(x), lb = 0.0, ub = 3.14):
         error_dict = {}
-        for i in range(max_points):
+        for i in range(1, max_points):
             n = 2*i
-            x = vec_func(n, lb, ub)
-            y = [y_func(n) for n in x] 
-            wrapper.build(x, y, len(y), lb, ub)
+            vec_x = vec_func(n, lb, ub)
+            # vec_x = [1.0, 2.0, 3.0, 4.0, 5.0] 
+            vec_y = [y_func(x) for x in vec_x] 
+            wrapper.build(vec_x, vec_y, len(vec_y), lb, ub)
         
             error = wrapper.error(y_func, lb, ub)
             error_dict[n] = error
         return error_dict
 
-# class Enhance:
-#     def __init__(self, dfw):
-#         self.dfw = dfw
-#     # def __repr__(self):
-
-#     def __str__(self, n = 10):
-#         path = self.dfw.data_dir +"/"+ self.dfw.output_filename
-#         count = 0
-#         with open(path, mode ='r') as file:
-#           csvFile = csv.reader(file)
-#           for lines in csvFile :
-#             if count < n:
-#                print(lines)
-#                count = count + 1
-#         print(f"{self.dfw.n_rows - 10} more rows ...")
-#         return ""
-#     def __repr__(self):
-#         print("A DataFrameWrapper object with the following characteristics:")
-#         print("Number of rows:", self.dfw.n_rows, "Number of columns:", self.dfw.n_cols, "\n with names and types:")
-#         print(self.dfw.column_info)
-#         return ""
-     
-
-#     def plot(self, colname_x, colname_y, graph_type = 'scatter'):
-#         # Check if the graph_type is valid
-#         if not hasattr(plt, graph_type):
-#             raise ValueError(f"Invalid graph_type '{graph_type}'. Please use a valid matplotlib plotting method.")
-
-#         # Dynamically call the appropriate matplotlib function
-#         plot_func = getattr(plt, graph_type)
-#         x = self.dfw.columns_by_name(colname_x)
-#         y = self.dfw.columns_by_name(colname_y)
-        
-#         plot_func(x, y)
-
-#         # naming the x axis  
-#         plt.xlabel(colname_x)  
-#         # naming the y axis  
-#         plt.ylabel(colname_y)  
-            
-#         # giving a title to my graph  
-#         plt.title(colname_x + " vs. " + colname_y)  
-        
-#         show_plot = input("Would you like to show the plot? [Y/N]")
-#         if (show_plot == "Y"):
-#             plt.show() 
-#         else:
-#             plt.savefig("plot.png")
-
-# #     def somefunctionforNUmpy(...):
-# #     def somefunctionforScioy(...):
-        
-
- 
