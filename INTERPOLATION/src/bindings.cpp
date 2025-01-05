@@ -39,10 +39,14 @@ PYBIND11_MODULE(InterpolateWrapper, m) {
         .def(py::init<>())  // Default constructor
         .def("build", &Toolbox::intw::LagrangeInterpolator<double>::build,
              py::arg("x"), py::arg("y"), py::arg("n"), py::arg("a"), py::arg("b"),
-             "Build the linear interpolator with given x, y, n, a, and b")
-        .def("error", &Toolbox::intw::LagrangeInterpolator<double>::Error,
-             py::arg("f"), py::arg("a"), py::arg("b"),
-             "Calculate the error of the interpolation for a given function f over [a, b]")
+             "Build the Spline interpolator with given x, y, n, a, and b")
+        .def("error", [](Toolbox::intw::LagrangeInterpolator<double> &self, py::function f, double a, double b) {
+    auto cpp_f = [&f](double x) { return f(x).cast<double>(); };  // Convert Python function to C++
+    return self.Error(cpp_f, a, b);
+}, py::arg("f"), py::arg("a"), py::arg("b"), "Calculate the error of the interpolation for a given function f over [a, b]")
+        /* .def("error", &Toolbox::intw::LagrangeInterpolator<double>::Error, */
+        /*      py::arg("f"), py::arg("a"), py::arg("b"), */
+        /*      "Calculate the error of the interpolation for a given function f over [a, b]") */
         .def("__call__", &Toolbox::intw::LagrangeInterpolator<double>::operator(),
              py::arg("t"),
              "Evaluate the interpolator at point t");
@@ -51,10 +55,14 @@ PYBIND11_MODULE(InterpolateWrapper, m) {
         .def(py::init<>())  // Default constructor
         .def("build", &Toolbox::intw::SplineInterpolator<double>::build,
              py::arg("x"), py::arg("y"), py::arg("n"), py::arg("a"), py::arg("b"),
-             "Build the linear interpolator with given x, y, n, a, and b")
-        .def("error", &Toolbox::intw::SplineInterpolator<double>::Error,
-             py::arg("f"), py::arg("a"), py::arg("b"),
-             "Calculate the error of the interpolation for a given function f over [a, b]")
+             "Build the Spline interpolator with given x, y, n, a, and b")
+        .def("error", [](Toolbox::intw::SplineInterpolator<double> &self, py::function f, double a, double b) {
+    auto cpp_f = [&f](double x) { return f(x).cast<double>(); };  // Convert Python function to C++
+    return self.Error(cpp_f, a, b);
+}, py::arg("f"), py::arg("a"), py::arg("b"), "Calculate the error of the interpolation for a given function f over [a, b]")
+        /* .def("error", &Toolbox::intw::SplineInterpolator<double>::Error, */
+        /*      py::arg("f"), py::arg("a"), py::arg("b"), */
+        /*      "Calculate the error of the interpolation for a given function f over [a, b]") */
         .def("__call__", &Toolbox::intw::SplineInterpolator<double>::operator(),
              py::arg("t"),
              "Evaluate the interpolator at point t");

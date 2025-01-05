@@ -56,6 +56,7 @@ namespace Toolbox {
         std::vector<double> result(uniqueNumbers.begin(), uniqueNumbers.end());
         return result;
     }
+    
 
     // Function to generate a vector of `n` equidistant points between `lb` and `ub`
     std::vector<double> fill_x_equid(int n, double lb, double ub) {

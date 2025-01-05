@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -g0 -O2 -DNDEBUG -Wall -fPIC -O3 -DNDEBUG -flto -shared  -o InterpolateWrapper.cpython-310-x86_64-linux-gnu.so CMakeFiles/InterpolateWrapper.dir/src/bindings.cpp.o  external/alglib-cpp/build/libalglib.a 
