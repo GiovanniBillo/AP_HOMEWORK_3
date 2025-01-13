@@ -4,11 +4,14 @@ All files and folders for the third assignment of the Advanced Programming cours
 
 ## Group Members
 - **Giovanni Billo**: billogiova@gmail.com
+- **Tommaso Piscitelli**: s309639@ds.units.it 
 
-### Contributions
+### Project Description
+
+[Original project](https://github.com/GiovanniBillo/AP_homework_2/tree/separate)
 
 Python bindings were added for both modules, allowing for seamless use of C++ functions in python.
-On the ohter hand, less performance-intensive functions like those generating random vectors to generate a graph of interpolation errors were implemented in oython.
+On the other hand, less performance-intensive functions like those generating random vectors to generate a graph of interpolation errors were implemented in oython.
 
 Some functionalities were added and extended:
 - Better structure, modularization and code organisation.
@@ -16,6 +19,22 @@ Some functionalities were added and extended:
 - more getter and setter methods for DataFrameWrapper
 - python function with C++ callback to reduce the size of the dataframe
 - Enhance functor which polimorphically allows classes from both modules to use some magic methods and plot data.
+- Easy installation with `pip`
+
+### Individual contributions
+
+Giovanni Billo
+- Python bindings for the DataFrameWrapper module
+- improved project structure
+- added methods and functionalities to DataFrameWrapper in both languages
+- Enhance functor 
+- comparison file
+- `pip` packaging
+
+Tommaso Piscitelli
+- Python bindings for the DataFrameWrapper module 
+- Interpolation part of the Enhance functor
+- python tests for interpolation
 
 ### Performance comparison
 The file comparison.py leverages decorators and the functor Compare() to time the speed of our C++ bindings against some popular python libraries like NumPy and SciPy.
@@ -29,28 +48,23 @@ All tests available for the C++ module were implemented also for python bindings
 There is the possibility to enable automated testing frameworks when building the project (see BUILD INSTRUCTIONS below)
 
 ## BUILD INSTRUCTIONS
-The library can easily be built using setuptools:
-Run the following commands in the relevant folder:
+The library can be directly installed via `pip` from [here](https://pypi.org/project/APToolBox/):
+```bash
+pip install APToolBox
+```
+Various other build options are also available:
+- using setuptools, after cloning the repository, run the following commands in the main folder:
 ```bash
 python3 setup.py build_ext
 ```
-
-One can also enable continuous integration by enabling automated tests via pytest and pytest-watch:
+It is also possible to enable continuous integration by enabling automated tests via pytest and pytest-watch:
 ```bash
 python3 setup.py build_ext watch_tests
 ```
 This setup will run all of the tests again each time a change is made in any part of the code, ensuring continuous integration and early catching of bugs.
 
----
-
+- using Cmake:
 ```bash
-cmake -B build -DCMAKE_BUILD_TYPE=Debug -DINTERPOLATION_MODULE=ON 
-cd build
-make
+cmake -B build
 ```
-
-This compiles a Debug build referring to the default data directory in each of the folders, including the InterpolateWrapper module as a custom visitor. 
-Files will contain a `DATA_DIR` variable for referencing the directory in code.
-
----
 

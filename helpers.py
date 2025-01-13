@@ -83,6 +83,20 @@ class Enhance:
         """
         self.wrapper = wrapper
 
+    def __call__(self, colname, transform_func = lambda data, base=np.e: np.log(data) / np.log(base), *args, **kwargs):
+        """
+        Apply a transformation function to the wrapper data dynamically. The default one is log transform.
+        """
+        if isinstance(self.wrapper, (DataFrameWrapperInt, DataFrameWrapperStr, DataFrameWrapperDouble)):
+            # Assume `self.wrapper.data` contains the data
+            column = self.wrapper.columns_by_name(colname) 
+            transformed_data = transform_func(column, *args, **kwargs)
+            return transformed_data
+        elif isinstance(self.wrapper, Interpolator):
+            raise TypeError("Transformation is not supported for Interpolator wrappers.")
+        else:
+            raise TypeError(f"Unsupported wrapper type: {type(self.wrapper)}")
+
     def __str__(self, n=10):
         """
         Display the first n rows of the data if it's a DataFrameWrapper.

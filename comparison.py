@@ -13,7 +13,7 @@ class Compare:
 
     '''
     def __init__(self, data_dir = "data", filename = "ranking.csv", dftype = "int",
-                 t = 2, n = 8, lb = 0, ub = 4, tolerance = 0.5, 
+                 t = 2.5, n = 8, lb = 0, ub = 4, tolerance = 0.5, 
                  vec_x = [1.0, 2.0, 3.0, 4.0, 5.0], 
                  max_points = 10):
        self.data_dir = data_dir
@@ -69,8 +69,8 @@ class Compare:
         pass
     def __call__(self):
         print("Comparing performance for the statistics module...")
-        self.myprogram_import()
-        self.python_import()
+
+        # self.python_import()
         print("Comparing performance for the interpolation module...")
         self.my_program_interpolate()
         self.python_interpolate()
@@ -81,7 +81,7 @@ def main():
     print("The Pandas implementation dwarfs the implemented one, because the third party library DataFrame needs the csv to be in a specific format. \n  Much time is therefore wasted to infer column types and format it.\n  However when we compare performance on a Dataset that is already formatted: \n ")
     comparison2 = Compare(data_dir = "data", filename = "IBM.csv", dftype = "str")
     comparison2()
-    print("our implementation is slighly faster. \n For interpolation, the ALGLIB library is slightly faster than scipy to compute a single point with 3 interpolators.")
+    print("our implementation is slighly faster. \n For interpolation, the ALGLIB library is slightly faster or just as fast as scipy to compute a single point with 3 interpolators, depending on the input.")
 
 
 if __name__ == "__main__":
