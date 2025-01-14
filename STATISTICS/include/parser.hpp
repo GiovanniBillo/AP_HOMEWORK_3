@@ -52,10 +52,12 @@ namespace Toolbox{
                             std::stringstream rowStream(rowLine);
                             std::string cell;
                             colIndex = 0;
+                            if (rowCount < 10){ // check the column type
                             while (std::getline(rowStream, cell, ',')) {
                                 if (colIndex >= columnNames.size()) break;
                                 updateColumnType(columnNames[colIndex].first, cleanString(cell), columnNames);
                                 ++colIndex;
+                            }
                             }
                             ++rowCount;
                             outputFile << rowLine << "\n";
