@@ -10,4 +10,3 @@ src/APToolBox.egg-info/SOURCES.txt
 src/APToolBox.egg-info/dependency_links.txt
 src/APToolBox.egg-info/top_level.txt
 src/APToolBox/ToolBox/__init__.py
-tests/test_python.py
