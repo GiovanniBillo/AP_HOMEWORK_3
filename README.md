@@ -21,6 +21,8 @@ Some functionalities were added and extended:
 - Enhance functor which polimorphically allows classes from both modules to use some magic methods and plot data.
 - Easy installation with `pip`
 
+A usage example of the module is provided in `main.py`.
+
 ### Individual contributions
 
 Giovanni Billo

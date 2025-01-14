@@ -22,7 +22,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 # Debug or Release configuration
 if(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
     message(STATUS "Building DEBUG version")
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -g -Wall -Wpedantic -Wextra -fPIC")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -pg -Wall -Wpedantic -Wextra -fPIC")
 else()
     message(STATUS "Building RELEASE version (default)")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g0 -O2 -DNDEBUG -Wall -fPIC")

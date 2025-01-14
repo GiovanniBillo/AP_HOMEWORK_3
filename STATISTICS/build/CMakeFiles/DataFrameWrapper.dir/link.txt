@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -O0 -pg -Wall -Wpedantic -Wextra -fPIC -g -shared  -o DataFrameWrapper.cpython-310-x86_64-linux-gnu.so CMakeFiles/DataFrameWrapper.dir/src/bindings.cpp.o  _deps/dataframe-build/libDataFrame.a -lrt 
