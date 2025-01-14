@@ -40,14 +40,14 @@ Tommaso Piscitelli
 
 ### Performance comparison
 The file comparison.py leverages decorators and the functor Compare() to time the speed of our C++ bindings against some popular python libraries like NumPy and SciPy.
-As the [DataFrame](https://github.com/hosseinmoein/DataFrame), our implementation lags behind pandas when it also has to format the file the right way. 
+As the [DataFrame](https://github.com/hosseinmoein/DataFrame) requires `.csv` files to be formatted a certain way in order to process them, our implementation lags behind pandas when it also has to format the file the right way.
 However, once a file is in the right format, it performs just as good and sometimes even slightly faster than Pandas.
 
 This is also the case with the InterpolateWrapper module, which is tested against SciPy implementations of the linear, Lahgrange and Cubic splines.
 
 ### Testing
 All tests available for the C++ module were implemented also for python bindings. 
-There is the possibility to enable automated testing frameworks when building the project (see BUILD INSTRUCTIONS below)
+It's possible to enable automated testing frameworks when building the project (see BUILD INSTRUCTIONS below)
 
 ## BUILD INSTRUCTIONS
 The library can be directly installed via `pip` from [here](https://pypi.org/project/APToolBox/):
@@ -69,4 +69,4 @@ This setup will run all of the tests again each time a change is made in any par
 ```bash
 cmake -B build
 ```
-
+For some usage examples, refer to `main.py`.
