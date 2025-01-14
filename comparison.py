@@ -69,8 +69,8 @@ class Compare:
         pass
     def __call__(self):
         print("Comparing performance for the statistics module...")
-
-        # self.python_import()
+        self.myprogram_import()
+        self.python_import()
         print("Comparing performance for the interpolation module...")
         self.my_program_interpolate()
         self.python_interpolate()
