@@ -70,3 +70,5 @@ This setup will run all of the tests again each time a change is made in any par
 cmake -B build
 ```
 For some usage examples, refer to `main.py`.
+To try them out, make sure to build the library with `setup.py` as explained above.
+If already built on your system, should you encounter bugs, delete the `ToolBox`, `__pycache__` and `build` folder, and then build it again. 
